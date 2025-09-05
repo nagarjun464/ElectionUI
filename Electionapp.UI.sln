@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Electionapp.UI", "Electionapp.UI.csproj", "{AFAFAA3A-03F0-A302-F710-731BB678714D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFAFAA3A-03F0-A302-F710-731BB678714D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFAFAA3A-03F0-A302-F710-731BB678714D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFAFAA3A-03F0-A302-F710-731BB678714D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFAFAA3A-03F0-A302-F710-731BB678714D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B80F368-D5D8-4E33-905F-24A30966EC62}
+	EndGlobalSection
+EndGlobal
