@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\Electionapp.UI.csproj": {}
+    "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\Electionapp.UI.csproj": {}
   },
   "projects": {
-    "c:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\Electionapp.UI.csproj": {
+    "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\Electionapp.UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\Electionapp.UI.csproj",
+        "projectUniqueName": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\Electionapp.UI.csproj",
         "projectName": "Electionapp.UI",
-        "projectPath": "c:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\Electionapp.UI.csproj",
+        "projectPath": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\Electionapp.UI.csproj",
         "packagesPath": "C:\\Users\\smart\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\",
+        "outputPath": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
