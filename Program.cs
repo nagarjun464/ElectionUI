@@ -1,28 +1,37 @@
-using Electionapp.UI.Components;
+    using System.Runtime.Intrinsics.Arm;
+    using Electionapp.UI.Components;
+    using Electionapp.UI.Services;
 
-var builder = WebApplication.CreateBuilder(args);
+    var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
+    
+    builder.Services.AddHttpClient<ElectionApiClient>(c =>
+    {
+        c.BaseAddress = new Uri("https://electionapi-814747071660.us-central1.run.app/");
+        Console.WriteLine("#####Client#######" + c.BaseAddress);
+    });
 
-var app = builder.Build();
+    // Add services to the container.
+    builder.Services.AddRazorComponents()
+        .AddInteractiveServerComponents();
 
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Error", createScopeForErrors: true);
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
+    var app = builder.Build();
 
-app.UseHttpsRedirection();
+    // Configure the HTTP request pipeline.
+    if (!app.Environment.IsDevelopment())
+    {
+        app.UseExceptionHandler("/Error", createScopeForErrors: true);
+        // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+        app.UseHsts();
+    }
+
+    app.UseHttpsRedirection();
 
 
-app.UseAntiforgery();
+    app.UseAntiforgery();
 
-app.MapStaticAssets();
-app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
+    app.MapStaticAssets();
+    app.MapRazorComponents<App>()
+        .AddInteractiveServerRenderMode();
 
-app.Run();
+    app.Run();

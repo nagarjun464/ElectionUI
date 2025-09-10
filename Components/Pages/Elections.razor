@@ -1,0 +1,264 @@
+﻿@page "/elections"
+@rendermode InteractiveServer
+@using Electionapp.UI.Models
+@using Electionapp.UI.Services
+@inject ElectionApiClient Api
+@inject IJSRuntime JS
+
+<h3 class="mb-3">Elections</h3>
+
+<div class="d-flex flex-wrap gap-2 align-items-end mb-3">
+    <div>
+        <label class="form-label">Status</label>
+        <select class="form-select" @bind="statusFilter">
+            <option value="">All</option>
+            <option>Draft</option>
+            <option>Scheduled</option>
+            <option>Open</option>
+            <option>Closed</option>
+        </select>
+    </div>
+
+    <div>
+        <label class="form-label">Limit</label>
+        <input class="form-control" style="width:120px" type="number" min="1" max="200" @bind="limit" />
+    </div>
+
+    <div class="flex-grow-1">
+        <label class="form-label">Search</label>
+        <input class="form-control" placeholder="Type name…" @bind="search" />
+    </div>
+
+    <div class="d-flex gap-2">
+        <button class="btn btn-outline-secondary" @onclick="Load">⟳ Refresh</button>
+        <button class="btn btn-primary" @onclick="ShowCreate">+ New Election</button>
+    </div>
+</div>
+
+@if (loading)
+{
+    <div class="alert alert-info">Loading…</div>
+}
+else if (Filtered.Count == 0)
+{
+    <div class="alert alert-warning">No elections found.</div>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table table-hover align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Start (local)</th>
+                    <th>End (local)</th>
+                    <th>Status</th>
+                    <th style="width:150px"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var e in Filtered)
+                {
+                    <tr>
+                        <td>@e.Name</td>
+                        <td><span class="badge bg-secondary">@CategoryName(e.CategoryCode)</span></td>
+                        <td>@FormatLocal(e.StartUtc)</td>
+                        <td>@FormatLocal(e.EndUtc)</td>
+                        <td><span class="@StatusClass(e.Status)">@e.Status</span></td>
+                        <td class="text-end">
+                            <button class="btn btn-sm btn-outline-primary me-2" @onclick="() => BeginEdit(e)">Edit</button>
+                            <button class="btn btn-sm btn-outline-danger" @onclick="() => ConfirmDelete(e)">Delete</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+@if (showCreate || showEdit)
+{
+    <div class="offcanvas-backdrop fade show"></div>
+    <div class="offcanvas offcanvas-end show" tabindex="-1" style="visibility: visible; width: 520px;">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">@((showCreate ? "New" : "Edit") + " Election")</h5>
+            <button type="button" class="btn-close text-reset" @onclick="ClosePanel"></button>
+        </div>
+        <div class="offcanvas-body">
+            <EditForm Model="form" OnValidSubmit="SaveAsync">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <div class="mb-3">
+                    <label class="form-label">Name</label>
+                    <InputText class="form-control" @bind-Value="form.Name" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Category Code</label>
+                    <InputSelect class="form-select" @bind-Value="form.CategoryCode">
+                        <option value="L">Local</option>
+                        <option value="S">State</option>
+                        <option value="T">Town Meeting</option>
+                    </InputSelect>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Start (local)</label>
+                    <input class="form-control" type="datetime-local" @bind="form.StartLocal" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">End (local)</label>
+                    <input class="form-control" type="datetime-local" @bind="form.EndLocal" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Time Zone Id</label>
+                    <InputSelect class="form-select" @bind-Value="form.TimeZoneId">
+                        <option>America/Chicago</option>
+                        <option>America/Los_Angeles</option>
+                        <option>America/New_York</option>
+                        <option>UTC</option>
+                    </InputSelect>
+                </div>
+
+                @if (showEdit)
+                {
+                    <div class="mb-3">
+                        <label class="form-label">Status</label>
+                        <InputSelect class="form-select" @bind-Value="form.Status">
+                            <option>Draft</option>
+                            <option>Scheduled</option>
+                            <option>Open</option>
+                            <option>Closed</option>
+                        </InputSelect>
+                    </div>
+                }
+
+                <div class="d-flex justify-content-end gap-2">
+                    <button type="button" class="btn btn-outline-secondary" @onclick="ClosePanel">Cancel</button>
+                    <button class="btn btn-primary" type="submit">Save</button>
+                </div>
+            </EditForm>
+        </div>
+    </div>
+}
+
+@code {
+    // grid state
+    List<ElectionDto> items = new();
+    bool loading = false;
+    string? statusFilter = "";
+    int limit = 50;
+    string search = "";
+
+    List<ElectionDto> Filtered =>
+        items.Where(e => (string.IsNullOrWhiteSpace(statusFilter) || e.Status.Equals(statusFilter, StringComparison.OrdinalIgnoreCase))
+                      && (string.IsNullOrWhiteSpace(search) || e.Name.Contains(search, StringComparison.OrdinalIgnoreCase)))
+             .OrderByDescending(e => e.CreatedUtc)
+             .ToList();
+
+    // panel state
+    bool showCreate = false, showEdit = false;
+    ElectionForm form = new();
+    ElectionDto? editing;
+
+    protected override async Task OnInitializedAsync() => await Load();
+
+    private async Task Load()
+    {
+        loading = true; StateHasChanged();
+        var status = string.IsNullOrWhiteSpace(statusFilter) ? null : statusFilter;
+        items = await Api.ListAsync(limit, status);
+        loading = false; StateHasChanged();
+    }
+
+    void ShowCreate()
+    {
+        form = ElectionForm.New();
+        showCreate = true; showEdit = false;
+    }
+
+    void BeginEdit(ElectionDto e)
+    {
+        editing = e;
+        form = ElectionForm.FromDto(e);
+        showCreate = false; showEdit = true;
+    }
+
+    void ClosePanel()
+    {
+        showCreate = showEdit = false;
+        editing = null;
+    }
+
+    async Task SaveAsync()
+    {
+        if (showCreate)
+        {
+            var dto = new CreateElectionDto
+                {
+                    Name = form.Name,
+                    CategoryCode = form.CategoryCode,
+                    StartUtc = ToUtc(form.StartLocal),
+                    EndUtc = ToUtc(form.EndLocal),
+                    TimeZoneId = form.TimeZoneId
+                };
+            var created = await Api.CreateAsync(dto);
+            items.Insert(0, created);
+        }
+        else if (showEdit && editing is not null)
+        {
+            var dto = new UpdateElectionDto
+                {
+                    Name = form.Name,
+                    CategoryCode = form.CategoryCode,
+                    StartUtc = ToUtc(form.StartLocal),
+                    EndUtc = ToUtc(form.EndLocal),
+                    TimeZoneId = form.TimeZoneId,
+                    Status = form.Status
+                };
+            await Api.UpdateAsync(editing.Id, dto);
+            // reflect changes locally
+            editing.Name = dto.Name;
+            editing.CategoryCode = dto.CategoryCode;
+            editing.StartUtc = dto.StartUtc;
+            editing.EndUtc = dto.EndUtc;
+            editing.TimeZoneId = dto.TimeZoneId;
+            editing.Status = dto.Status;
+        }
+        ClosePanel();
+    }
+
+    async Task ConfirmDelete(ElectionDto e)
+    {
+        if (!await JS.InvokeAsync<bool>("confirm", $"Delete '{e.Name}'?")) return;
+        await Api.DeleteAsync(e.Id);
+        items.Remove(e);
+    }
+
+    static string CategoryName(string code) => code switch
+    {
+        "L" => "Local",
+        "S" => "State",
+        "T" => "Town Mtg",
+        _ => code
+    };
+
+    static string StatusClass(string s) => s switch
+    {
+        "Open" => "badge bg-success",
+        "Scheduled" => "badge bg-info",
+        "Closed" => "badge bg-secondary",
+        _ => "badge bg-warning text-dark" // Draft
+    };
+
+    static string FormatLocal(DateTime utc)
+        => DateTime.SpecifyKind(utc, DateTimeKind.Utc).ToLocalTime()
+                    .ToString("MMM dd, yyyy h:mm tt");
+
+    static DateTime ToUtc(DateTime local)
+        => DateTime.SpecifyKind(local, DateTimeKind.Local).ToUniversalTime();
+}
