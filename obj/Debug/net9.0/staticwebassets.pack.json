@@ -2,7 +2,11 @@
   "Files": [
     {
       "Id": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\Electionapp.UI.bundle.scp.css",
-      "PackagePath": "staticwebassets\\Electionapp.UI.c4zue61mo2.bundle.scp.css"
+      "PackagePath": "staticwebassets\\Electionapp.UI.bcmbfdl3q3.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\wwwroot\\Images\\hero.png",
+      "PackagePath": "staticwebassets\\Images\\hero.png"
     },
     {
       "Id": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\wwwroot\\app.css",

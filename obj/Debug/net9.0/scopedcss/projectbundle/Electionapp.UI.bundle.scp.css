@@ -203,3 +203,25 @@ main[b-yv6g38jdyd] {
         overflow-y: auto;
     }
 }
+/* _content/Electionapp.UI/Components/Pages/Home.razor.rz.scp.css */
+.hero[b-vpqe1itzh5] {
+    min-height: 100vh; /* full screen height */
+    background: url('/images/hero.png') center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay[b-vpqe1itzh5] {
+    background: rgba(0,0,0,.35);
+    padding: 2rem;
+    border-radius: 12px;
+    color: #fff;
+}
+
+/* (Optional) avoid parallax on mobile; iOS doesn't like background-attachment: fixed */
+@media (min-width: 900px) {
+    .hero[b-vpqe1itzh5] {
+        background-attachment: fixed;
+    }
+}

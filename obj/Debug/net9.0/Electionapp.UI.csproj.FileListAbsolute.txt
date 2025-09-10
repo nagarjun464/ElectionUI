@@ -62,8 +62,6 @@ C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\compr
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\compressed\y3kl3ejpxs-h1s4sie4z3.gz
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\compressed\m5iaijznjy-63fj8s7r0e.gz
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\compressed\j8d2ac488x-0j3bgjxly4.gz
-C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\compressed\uq0bama6li-c4zue61mo2.gz
-C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\compressed\stvysj3hai-c4zue61mo2.gz
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\staticwebassets.build.endpoints.json
@@ -79,3 +77,6 @@ C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\refin
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\Electionapp.UI.pdb
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\Electionapp.UI.genruntimeconfig.cache
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\ref\Electionapp.UI.dll
+C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\scopedcss\Components\Pages\Home.razor.rz.scp.css
+C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\compressed\uq0bama6li-bcmbfdl3q3.gz
+C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\compressed\stvysj3hai-bcmbfdl3q3.gz

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KoNtqlAGDQIur+t5oF9P1xWWrPGQgdx+39HVnc+Z+sg=",
+  "Hash": "yUFxupfk/wheRnKLQwC5LzNVkQJlD6lD5HyvXyNGAYA=",
   "Source": "Electionapp.UI",
   "BasePath": "_content/Electionapp.UI",
   "Mode": "Default",
@@ -773,12 +773,12 @@
       "OriginalItemSpec": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\stvysj3hai-c4zue61mo2.gz",
+      "Identity": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\stvysj3hai-bcmbfdl3q3.gz",
       "SourceId": "Electionapp.UI",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Electionapp.UI",
-      "RelativePath": "Electionapp.UI#[.{fingerprint=c4zue61mo2}]!.bundle.scp.css.gz",
+      "RelativePath": "Electionapp.UI#[.{fingerprint=bcmbfdl3q3}]!.bundle.scp.css.gz",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Alternative",
@@ -787,8 +787,8 @@
       "RelatedAsset": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\Electionapp.UI.bundle.scp.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "ielw9rygdt",
-      "Integrity": "WknSq7hgzrkPzhTnJvWy5DIXteWUJH3oGZHUDG0yGro=",
+      "Fingerprint": "s9fea1h9mw",
+      "Integrity": "0IK7zm12nq4lFI03ylBJnyE9Rbq2PAKD7X7sw3Z/EJo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\Electionapp.UI.bundle.scp.css"
@@ -857,12 +857,12 @@
       "OriginalItemSpec": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\uq0bama6li-c4zue61mo2.gz",
+      "Identity": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\uq0bama6li-bcmbfdl3q3.gz",
       "SourceId": "Electionapp.UI",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Electionapp.UI",
-      "RelativePath": "Electionapp.UI#[.{fingerprint=c4zue61mo2}]?.styles.css.gz",
+      "RelativePath": "Electionapp.UI#[.{fingerprint=bcmbfdl3q3}]?.styles.css.gz",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Alternative",
@@ -871,8 +871,8 @@
       "RelatedAsset": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\scopedcss\\bundle\\Electionapp.UI.styles.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "ielw9rygdt",
-      "Integrity": "WknSq7hgzrkPzhTnJvWy5DIXteWUJH3oGZHUDG0yGro=",
+      "Fingerprint": "s9fea1h9mw",
+      "Integrity": "0IK7zm12nq4lFI03ylBJnyE9Rbq2PAKD7X7sw3Z/EJo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\scopedcss\\bundle\\Electionapp.UI.styles.css"
@@ -1018,8 +1018,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "c4zue61mo2",
-      "Integrity": "TEP1H4RmPfMDxV0YxvzQLO9D7haB16xUiYHIdVDvqhY=",
+      "Fingerprint": "bcmbfdl3q3",
+      "Integrity": "JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\scopedcss\\bundle\\Electionapp.UI.styles.css"
@@ -1039,8 +1039,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "c4zue61mo2",
-      "Integrity": "TEP1H4RmPfMDxV0YxvzQLO9D7haB16xUiYHIdVDvqhY=",
+      "Fingerprint": "bcmbfdl3q3",
+      "Integrity": "JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\Electionapp.UI.bundle.scp.css"
@@ -1086,6 +1086,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\wwwroot\\Images\\hero.png",
+      "SourceId": "Electionapp.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\wwwroot\\",
+      "BasePath": "_content/Electionapp.UI",
+      "RelativePath": "Images/hero#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vsco2zspd6",
+      "Integrity": "zwRobsphTFpoICk+U3SbQZUb0LkuMwnnMvXwbcqcLMI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\hero.png"
     },
     {
       "Identity": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
@@ -2312,13 +2333,13 @@
       ]
     },
     {
-      "Route": "Electionapp.UI.bundle.scp.css",
-      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\stvysj3hai-c4zue61mo2.gz",
+      "Route": "Electionapp.UI.bcmbfdl3q3.bundle.scp.css",
+      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\stvysj3hai-bcmbfdl3q3.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000565291125"
+          "Quality": "0.000511508951"
         }
       ],
       "ResponseHeaders": [
@@ -2328,19 +2349,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1768"
+          "Value": "1954"
         },
         {
           "Name": "ETag",
-          "Value": "\"WknSq7hgzrkPzhTnJvWy5DIXteWUJH3oGZHUDG0yGro=\""
+          "Value": "\"0IK7zm12nq4lFI03ylBJnyE9Rbq2PAKD7X7sw3Z/EJo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 10 Sep 2025 00:17:20 GMT"
+          "Value": "Wed, 10 Sep 2025 17:06:07 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "no-cache"
+          "Value": "max-age=31536000, immutable"
         },
         {
           "Name": "Content-Encoding",
@@ -2356,18 +2377,26 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"TEP1H4RmPfMDxV0YxvzQLO9D7haB16xUiYHIdVDvqhY=\""
+          "Value": "W/\"JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU=\""
         }
       ],
       "EndpointProperties": [
         {
+          "Name": "fingerprint",
+          "Value": "bcmbfdl3q3"
+        },
+        {
+          "Name": "label",
+          "Value": "Electionapp.UI.bundle.scp.css"
+        },
+        {
           "Name": "integrity",
-          "Value": "sha256-TEP1H4RmPfMDxV0YxvzQLO9D7haB16xUiYHIdVDvqhY="
+          "Value": "sha256-JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU="
         }
       ]
     },
     {
-      "Route": "Electionapp.UI.bundle.scp.css",
+      "Route": "Electionapp.UI.bcmbfdl3q3.bundle.scp.css",
       "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\Electionapp.UI.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2377,7 +2406,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5975"
+          "Value": "6589"
         },
         {
           "Name": "Content-Type",
@@ -2385,121 +2414,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"TEP1H4RmPfMDxV0YxvzQLO9D7haB16xUiYHIdVDvqhY=\""
+          "Value": "\"JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 10 Sep 2025 00:17:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-TEP1H4RmPfMDxV0YxvzQLO9D7haB16xUiYHIdVDvqhY="
-        }
-      ]
-    },
-    {
-      "Route": "Electionapp.UI.bundle.scp.css.gz",
-      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\stvysj3hai-c4zue61mo2.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1768"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WknSq7hgzrkPzhTnJvWy5DIXteWUJH3oGZHUDG0yGro=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 10 Sep 2025 00:17:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-WknSq7hgzrkPzhTnJvWy5DIXteWUJH3oGZHUDG0yGro="
-        }
-      ]
-    },
-    {
-      "Route": "Electionapp.UI.c4zue61mo2.bundle.scp.css",
-      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\stvysj3hai-c4zue61mo2.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000565291125"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1768"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WknSq7hgzrkPzhTnJvWy5DIXteWUJH3oGZHUDG0yGro=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 10 Sep 2025 00:17:20 GMT"
+          "Value": "Wed, 10 Sep 2025 17:06:07 GMT"
         },
         {
           "Name": "Cache-Control",
           "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"TEP1H4RmPfMDxV0YxvzQLO9D7haB16xUiYHIdVDvqhY=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "c4zue61mo2"
+          "Value": "bcmbfdl3q3"
         },
         {
           "Name": "label",
@@ -2507,13 +2436,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-TEP1H4RmPfMDxV0YxvzQLO9D7haB16xUiYHIdVDvqhY="
+          "Value": "sha256-JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU="
         }
       ]
     },
     {
-      "Route": "Electionapp.UI.c4zue61mo2.bundle.scp.css",
-      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\Electionapp.UI.bundle.scp.css",
+      "Route": "Electionapp.UI.bcmbfdl3q3.bundle.scp.css.gz",
+      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\stvysj3hai-bcmbfdl3q3.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2522,7 +2451,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5975"
+          "Value": "1954"
         },
         {
           "Name": "Content-Type",
@@ -2530,56 +2459,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"TEP1H4RmPfMDxV0YxvzQLO9D7haB16xUiYHIdVDvqhY=\""
+          "Value": "\"0IK7zm12nq4lFI03ylBJnyE9Rbq2PAKD7X7sw3Z/EJo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 10 Sep 2025 00:17:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "c4zue61mo2"
-        },
-        {
-          "Name": "label",
-          "Value": "Electionapp.UI.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-TEP1H4RmPfMDxV0YxvzQLO9D7haB16xUiYHIdVDvqhY="
-        }
-      ]
-    },
-    {
-      "Route": "Electionapp.UI.c4zue61mo2.bundle.scp.css.gz",
-      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\stvysj3hai-c4zue61mo2.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1768"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WknSq7hgzrkPzhTnJvWy5DIXteWUJH3oGZHUDG0yGro=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 10 Sep 2025 00:17:20 GMT"
+          "Value": "Wed, 10 Sep 2025 17:06:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2597,7 +2481,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "c4zue61mo2"
+          "Value": "bcmbfdl3q3"
         },
         {
           "Name": "label",
@@ -2605,18 +2489,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-WknSq7hgzrkPzhTnJvWy5DIXteWUJH3oGZHUDG0yGro="
+          "Value": "sha256-0IK7zm12nq4lFI03ylBJnyE9Rbq2PAKD7X7sw3Z/EJo="
         }
       ]
     },
     {
-      "Route": "Electionapp.UI.c4zue61mo2.styles.css",
-      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\uq0bama6li-c4zue61mo2.gz",
+      "Route": "Electionapp.UI.bcmbfdl3q3.styles.css",
+      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\uq0bama6li-bcmbfdl3q3.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000565291125"
+          "Quality": "0.000511508951"
         }
       ],
       "ResponseHeaders": [
@@ -2626,15 +2510,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1768"
+          "Value": "1954"
         },
         {
           "Name": "ETag",
-          "Value": "\"WknSq7hgzrkPzhTnJvWy5DIXteWUJH3oGZHUDG0yGro=\""
+          "Value": "\"0IK7zm12nq4lFI03ylBJnyE9Rbq2PAKD7X7sw3Z/EJo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 10 Sep 2025 00:17:20 GMT"
+          "Value": "Wed, 10 Sep 2025 17:06:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2654,13 +2538,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"TEP1H4RmPfMDxV0YxvzQLO9D7haB16xUiYHIdVDvqhY=\""
+          "Value": "W/\"JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "c4zue61mo2"
+          "Value": "bcmbfdl3q3"
         },
         {
           "Name": "label",
@@ -2668,12 +2552,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-TEP1H4RmPfMDxV0YxvzQLO9D7haB16xUiYHIdVDvqhY="
+          "Value": "sha256-JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU="
         }
       ]
     },
     {
-      "Route": "Electionapp.UI.c4zue61mo2.styles.css",
+      "Route": "Electionapp.UI.bcmbfdl3q3.styles.css",
       "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\scopedcss\\bundle\\Electionapp.UI.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2683,7 +2567,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5975"
+          "Value": "6589"
         },
         {
           "Name": "Content-Type",
@@ -2691,11 +2575,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"TEP1H4RmPfMDxV0YxvzQLO9D7haB16xUiYHIdVDvqhY=\""
+          "Value": "\"JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 10 Sep 2025 00:17:20 GMT"
+          "Value": "Wed, 10 Sep 2025 17:06:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2705,7 +2589,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "c4zue61mo2"
+          "Value": "bcmbfdl3q3"
         },
         {
           "Name": "label",
@@ -2713,13 +2597,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-TEP1H4RmPfMDxV0YxvzQLO9D7haB16xUiYHIdVDvqhY="
+          "Value": "sha256-JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU="
         }
       ]
     },
     {
-      "Route": "Electionapp.UI.c4zue61mo2.styles.css.gz",
-      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\uq0bama6li-c4zue61mo2.gz",
+      "Route": "Electionapp.UI.bcmbfdl3q3.styles.css.gz",
+      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\uq0bama6li-bcmbfdl3q3.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2728,7 +2612,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1768"
+          "Value": "1954"
         },
         {
           "Name": "Content-Type",
@@ -2736,11 +2620,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"WknSq7hgzrkPzhTnJvWy5DIXteWUJH3oGZHUDG0yGro=\""
+          "Value": "\"0IK7zm12nq4lFI03ylBJnyE9Rbq2PAKD7X7sw3Z/EJo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 10 Sep 2025 00:17:20 GMT"
+          "Value": "Wed, 10 Sep 2025 17:06:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2758,7 +2642,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "c4zue61mo2"
+          "Value": "bcmbfdl3q3"
         },
         {
           "Name": "label",
@@ -2766,18 +2650,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-WknSq7hgzrkPzhTnJvWy5DIXteWUJH3oGZHUDG0yGro="
+          "Value": "sha256-0IK7zm12nq4lFI03ylBJnyE9Rbq2PAKD7X7sw3Z/EJo="
         }
       ]
     },
     {
-      "Route": "Electionapp.UI.styles.css",
-      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\uq0bama6li-c4zue61mo2.gz",
+      "Route": "Electionapp.UI.bundle.scp.css",
+      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\stvysj3hai-bcmbfdl3q3.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000565291125"
+          "Quality": "0.000511508951"
         }
       ],
       "ResponseHeaders": [
@@ -2787,15 +2671,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1768"
+          "Value": "1954"
         },
         {
           "Name": "ETag",
-          "Value": "\"WknSq7hgzrkPzhTnJvWy5DIXteWUJH3oGZHUDG0yGro=\""
+          "Value": "\"0IK7zm12nq4lFI03ylBJnyE9Rbq2PAKD7X7sw3Z/EJo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 10 Sep 2025 00:17:20 GMT"
+          "Value": "Wed, 10 Sep 2025 17:06:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2815,13 +2699,150 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"TEP1H4RmPfMDxV0YxvzQLO9D7haB16xUiYHIdVDvqhY=\""
+          "Value": "W/\"JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-TEP1H4RmPfMDxV0YxvzQLO9D7haB16xUiYHIdVDvqhY="
+          "Value": "sha256-JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU="
+        }
+      ]
+    },
+    {
+      "Route": "Electionapp.UI.bundle.scp.css",
+      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\Electionapp.UI.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6589"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 10 Sep 2025 17:06:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU="
+        }
+      ]
+    },
+    {
+      "Route": "Electionapp.UI.bundle.scp.css.gz",
+      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\stvysj3hai-bcmbfdl3q3.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1954"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0IK7zm12nq4lFI03ylBJnyE9Rbq2PAKD7X7sw3Z/EJo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 10 Sep 2025 17:06:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0IK7zm12nq4lFI03ylBJnyE9Rbq2PAKD7X7sw3Z/EJo="
+        }
+      ]
+    },
+    {
+      "Route": "Electionapp.UI.styles.css",
+      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\uq0bama6li-bcmbfdl3q3.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000511508951"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1954"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0IK7zm12nq4lFI03ylBJnyE9Rbq2PAKD7X7sw3Z/EJo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 10 Sep 2025 17:06:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU="
         }
       ]
     },
@@ -2836,7 +2857,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5975"
+          "Value": "6589"
         },
         {
           "Name": "Content-Type",
@@ -2844,11 +2865,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"TEP1H4RmPfMDxV0YxvzQLO9D7haB16xUiYHIdVDvqhY=\""
+          "Value": "\"JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 10 Sep 2025 00:17:20 GMT"
+          "Value": "Wed, 10 Sep 2025 17:06:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2858,13 +2879,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-TEP1H4RmPfMDxV0YxvzQLO9D7haB16xUiYHIdVDvqhY="
+          "Value": "sha256-JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU="
         }
       ]
     },
     {
       "Route": "Electionapp.UI.styles.css.gz",
-      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\uq0bama6li-c4zue61mo2.gz",
+      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\uq0bama6li-bcmbfdl3q3.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2873,7 +2894,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1768"
+          "Value": "1954"
         },
         {
           "Name": "Content-Type",
@@ -2881,11 +2902,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"WknSq7hgzrkPzhTnJvWy5DIXteWUJH3oGZHUDG0yGro=\""
+          "Value": "\"0IK7zm12nq4lFI03ylBJnyE9Rbq2PAKD7X7sw3Z/EJo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 10 Sep 2025 00:17:20 GMT"
+          "Value": "Wed, 10 Sep 2025 17:06:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2903,7 +2924,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-WknSq7hgzrkPzhTnJvWy5DIXteWUJH3oGZHUDG0yGro="
+          "Value": "sha256-0IK7zm12nq4lFI03ylBJnyE9Rbq2PAKD7X7sw3Z/EJo="
         }
       ]
     },
@@ -2986,6 +3007,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "Images/hero.png",
+      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\wwwroot\\Images\\hero.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "140626"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zwRobsphTFpoICk+U3SbQZUb0LkuMwnnMvXwbcqcLMI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 10 Sep 2025 16:56:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zwRobsphTFpoICk+U3SbQZUb0LkuMwnnMvXwbcqcLMI="
+        }
+      ]
+    },
+    {
+      "Route": "Images/hero.vsco2zspd6.png",
+      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\wwwroot\\Images\\hero.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "140626"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zwRobsphTFpoICk+U3SbQZUb0LkuMwnnMvXwbcqcLMI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 10 Sep 2025 16:56:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vsco2zspd6"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/hero.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zwRobsphTFpoICk+U3SbQZUb0LkuMwnnMvXwbcqcLMI="
         }
       ]
     },

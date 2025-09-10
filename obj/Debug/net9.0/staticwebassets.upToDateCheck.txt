@@ -45,6 +45,7 @@ C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\wwwroot\lib\bootstrap\
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
 wwwroot\app.css
 wwwroot\favicon.png
+wwwroot\Images\hero.png
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
