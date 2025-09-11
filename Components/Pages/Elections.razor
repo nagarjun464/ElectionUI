@@ -54,7 +54,7 @@ else
                     <th>Start (local)</th>
                     <th>End (local)</th>
                     <th>Status</th>
-                    <th style="width:150px"></th>
+                    <th style="width:200px"></th>
                 </tr>
             </thead>
             <tbody>
@@ -67,6 +67,7 @@ else
                         <td>@FormatLocal(e.EndUtc)</td>
                         <td><span class="@StatusClass(e.Status)">@e.Status</span></td>
                         <td class="text-end">
+                            <a class="btn btn-sm btn-outline-secondary me-2" href="@($"/electiondetails/{e.Id}")">View</a>
                             <button class="btn btn-sm btn-outline-primary me-2" @onclick="() => BeginEdit(e)">Edit</button>
                             <button class="btn btn-sm btn-outline-danger" @onclick="() => ConfirmDelete(e)">Delete</button>
                         </td>
@@ -141,6 +142,7 @@ else
                     <button type="button" class="btn btn-outline-secondary" @onclick="ClosePanel">Cancel</button>
                     <button class="btn btn-primary" type="submit">Save</button>
                 </div>
+
             </EditForm>
         </div>
     </div>

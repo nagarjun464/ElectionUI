@@ -1,0 +1,177 @@
+﻿@page "/electiondetails/{id}"
+@rendermode InteractiveServer
+
+@using Electionapp.UI.Models
+@using Electionapp.UI.Services
+@inject ElectionApiClient Api
+@inject NavigationManager Nav
+
+<h3 class="mb-3">Election Details</h3>
+
+@if (loading)
+{
+    <div class="alert alert-info">Loading…</div>
+}
+else if (error is not null)
+{
+    <div class="alert alert-danger">@error</div>
+}
+else if (e is null)
+{
+    <div class="alert alert-warning">Election not found.</div>
+}
+else
+{
+    <div class="mb-3">
+        <a class="btn btn-sm btn-outline-secondary" href="/elections">← Back to list</a>
+    </div>
+
+    <div class="card mb-3">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+                <div>
+                    <h4 class="card-title mb-1">@e.Name</h4>
+                    <div class="text-muted">
+                        <span class="badge bg-secondary me-2">@CategoryName(e.CategoryCode)</span>
+                        <span>Created: @FormatLocal(e.CreatedUtc)</span>
+                        <span class="ms-3">Updated: @FormatLocal(e.UpdatedUtc)</span>
+                    </div>
+                </div>
+                <span class="@StatusClass(e.Status)">@e.Status</span>
+            </div>
+
+            <div class="row g-3 mt-2">
+                <div class="col-md-4">
+                    <div class="border rounded p-3">
+                        <div class="fw-semibold">Schedule</div>
+                        <div class="small text-muted">Times shown in your local time</div>
+                        <div class="mt-2">Start: <strong>@FormatLocal(e.StartUtc)</strong></div>
+                        <div>End: <strong>@FormatLocal(e.EndUtc)</strong></div>
+                        <div class="mt-2">Time Zone Id: <code>@e.TimeZoneId</code></div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="border rounded p-3">
+                        <div class="fw-semibold mb-2">Timeline</div>
+                        @if (TotalSeconds(e) <= 0)
+                        {
+                            <div class="text-muted">Invalid time range.</div>
+                        }
+                        else
+                        {
+                            var pct = Math.Clamp(ProgressPercent(e), 0, 100);
+                            <div class="progress" title="@pct% complete">
+                                <div class="progress-bar" role="progressbar" style="width:@pct%">
+                                    @pct%
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between small text-muted mt-1">
+                                <span>@FormatLocal(e.StartUtc)</span>
+                                <span>now: @FormatLocal(DateTime.UtcNow)</span>
+                                <span>@FormatLocal(e.EndUtc)</span>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-3">
+                <div class="fw-semibold mb-2">Quick Status</div>
+                <div class="btn-group" role="group" aria-label="Status">
+                    <button class="btn btn-outline-secondary" disabled="@(e.Status=="Draft")" @onclick='() => SetStatus("Draft")'>Draft</button>
+                    <button class="btn btn-outline-info" disabled="@(e.Status=="Scheduled")" @onclick='() => SetStatus("Scheduled")'>Scheduled</button>
+                    <button class="btn btn-outline-success" disabled="@(e.Status=="Open")" @onclick='() => SetStatus("Open")'>Open</button>
+                    <button class="btn btn-outline-dark" disabled="@(e.Status=="Closed")" @onclick='() => SetStatus("Closed")'>Closed</button>
+                </div>
+                <button class="btn btn-outline-danger ms-3" @onclick="DeleteAndBack">Delete</button>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter] public string id { get; set; } = "";
+    ElectionDto? e;
+    bool loading = true;
+    string? error;
+
+    protected override async Task OnParametersSetAsync() => await Load();
+
+    async Task Load()
+    {
+        try
+        {
+            loading = true; error = null;
+            e = await Api.GetAsync(id);
+        }
+        catch (Exception ex)
+        {
+            error = ex.Message;
+        }
+        finally { loading = false; }
+    }
+
+    async Task SetStatus(string status)
+    {
+        if (e is null) return;
+
+        // Build an UpdateElectionDto from the current item
+        var dto = new UpdateElectionDto
+            {
+                Name = e.Name,
+                CategoryCode = e.CategoryCode,
+                StartUtc = e.StartUtc,
+                EndUtc = e.EndUtc,
+                TimeZoneId = e.TimeZoneId,
+                Status = status
+            };
+
+        await Api.UpdateAsync(e.Id, dto);
+        e.Status = status; // reflect immediately
+                           // Optionally refresh: await Load();
+    }
+
+    async Task DeleteAndBack()
+    {
+        if (e is null) return;
+        if (!await Confirm($"Delete '{e.Name}'?")) return;
+
+        await Api.DeleteAsync(e.Id);
+        Nav.NavigateTo("/elections");
+    }
+
+    // helpers
+    static string CategoryName(string code) => code switch
+    {
+        "L" => "Local",
+        "S" => "State",
+        "T" => "Town Mtg",
+        _ => code
+    };
+
+    static string StatusClass(string s) => s switch
+    {
+        "Open" => "badge bg-success",
+        "Scheduled" => "badge bg-info",
+        "Closed" => "badge bg-secondary",
+        _ => "badge bg-warning text-dark" // Draft
+    };
+
+    static string FormatLocal(DateTime utc)
+        => DateTime.SpecifyKind(utc, DateTimeKind.Utc).ToLocalTime()
+                    .ToString("MMM dd, yyyy h:mm tt");
+
+    static double TotalSeconds(ElectionDto x) => (x.EndUtc - x.StartUtc).TotalSeconds;
+    static int ProgressPercent(ElectionDto x)
+    {
+        var now = DateTime.UtcNow;
+        if (now <= x.StartUtc) return 0;
+        if (now >= x.EndUtc) return 100;
+        var elapsed = (now - x.StartUtc).TotalSeconds;
+        var total = (x.EndUtc - x.StartUtc).TotalSeconds;
+        return (int)Math.Round(100 * (elapsed / total));
+    }
+
+    [Inject] IJSRuntime JS { get; set; } = default!;
+    async Task<bool> Confirm(string msg) => await JS.InvokeAsync<bool>("confirm", msg);
+}

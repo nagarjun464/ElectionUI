@@ -33,4 +33,11 @@ public class ElectionApiClient
         var resp = await _http.DeleteAsync($"api/elections/{id}", ct);
         resp.EnsureSuccessStatusCode();
     }
+
+    public async Task<ElectionDto> GetAsync(string id, CancellationToken ct = default)
+    {
+        var item = await _http.GetFromJsonAsync<ElectionDto>($"api/elections/{id}", ct);
+        return item!;
+    }
+
 }
