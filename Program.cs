@@ -10,9 +10,15 @@
         c.BaseAddress = new Uri("https://electionapi-814747071660.us-central1.run.app/");
         Console.WriteLine("#####Client#######" + c.BaseAddress);
     });
+    builder.Services.AddHttpClient<PresidentCountyApiClient>(c =>
+    {
+        c.BaseAddress = new Uri("https://president-county-api-814747071660.us-central1.run.app");
+        Console.WriteLine("#####PresidentCountyClient#######" + c.BaseAddress);
+    });
 
-    // Add services to the container.
-    builder.Services.AddRazorComponents()
+
+// Add services to the container.
+builder.Services.AddRazorComponents()
         .AddInteractiveServerComponents();
 
     var app = builder.Build();

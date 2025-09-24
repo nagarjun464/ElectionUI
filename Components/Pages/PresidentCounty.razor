@@ -1,0 +1,139 @@
+﻿@page "/presidentcounty"
+@using Electionapp.UI.Services
+@using Electionapp.UI.Models
+@inject PresidentCountyApiClient PcApi
+@inject IJSRuntime JS
+@rendermode InteractiveServer
+
+<h3 class="mb-3">President County Candidates</h3>
+
+<div class="d-flex flex-wrap gap-2 align-items-end mb-3">
+    <div class="flex-grow-1">
+        <label class="form-label">Search Candidate</label>
+        <input class="form-control" placeholder="Type name..." @bind="search" />
+    </div>
+    <div class="d-flex gap-2">
+        <button class="btn btn-outline-secondary" @onclick="Load">⟳ Refresh</button>
+        <button class="btn btn-primary" @onclick="ShowCreate">+ Add Candidate</button>
+    </div>
+</div>
+
+@if (loading)
+{
+    <div class="alert alert-info">Loading…</div>
+}
+else if (candidates.Count == 0)
+{
+    <div class="alert alert-warning">No candidates found.</div>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table table-hover align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th>State</th>
+                    <th>County</th>
+                    <th>Name</th>
+                    <th>Party</th>
+                    <th>Total Votes</th>
+                    <th>Won</th>
+                    <th style="width:150px"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var c in candidates)
+                {
+                    <tr>
+                        <td>@c.State</td>
+                        <td>@c.County</td>
+                        <td>@c.CandidateName</td>
+                        <td>@c.Party</td>
+                        <td>@c.TotalVotes</td>
+                        <td>@c.Won</td>
+                        <td class="text-end">
+                            <button class="btn btn-sm btn-outline-primary me-2" @onclick="() => BeginEdit(c)">Edit</button>
+                            <button class="btn btn-sm btn-outline-danger" @onclick="() => ConfirmDelete(c)">Delete</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+        
+
+    <div class="d-flex justify-content-between mt-3">
+        <button class="btn btn-outline-secondary" @onclick="PrevPage" disabled="@( !canPrev )">
+            Previous
+        </button>
+
+        <span>Page @currentPage</span>
+
+        <button class="btn btn-outline-secondary" @onclick="NextPage" disabled="@( !canNext )">
+            Next
+        </button>
+    </div>
+
+
+}
+
+@code {
+    private List<PresidentCountyDto> candidates = new();
+    private bool loading = false;
+    private string search = "";
+
+    private int currentPage = 1;
+    private int pageSize = 10; // default per page
+
+    private bool canPrev => currentPage > 1;
+    private bool canNext => candidates.Count == pageSize;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Load();
+    }
+
+    private async Task Load()
+    {
+        loading = true; StateHasChanged();
+        candidates = await PcApi.ListAsync(currentPage, pageSize, search);
+        loading = false; StateHasChanged();
+    }
+
+    private async Task PrevPage()
+    {
+        if (canPrev)
+        {
+            currentPage--;
+            await Load();
+        }
+    }
+
+    private async Task NextPage()
+    {
+        if (canNext)
+        {
+            currentPage++;
+            await Load();
+        }
+    }
+
+
+    void ShowCreate()
+    {
+        // TODO: open modal / form to add a candidate
+    }
+
+    void BeginEdit(PresidentCountyDto c)
+    {
+        // TODO: open modal / form to edit candidate
+    }
+
+    async Task ConfirmDelete(PresidentCountyDto c)
+    {
+        if (!await JS.InvokeAsync<bool>("confirm", $"Delete '{c.CandidateName}'?")) return;
+        await PcApi.DeleteAsync(c.Id);
+        candidates.Remove(c);
+    }
+}
