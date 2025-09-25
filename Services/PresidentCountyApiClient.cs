@@ -46,7 +46,8 @@ public class PresidentCountyApiClient
     // Update
     public async Task UpdateAsync(string id, UpdatePresidentCountyDto dto, CancellationToken ct = default)
     {
-        var resp = await _http.PutAsJsonAsync($"api/PresidentCounty/{id}", dto, cancellationToken: ct);
+        var resp = await _http.PutAsJsonAsync($"api/PresidentCounty/{id}", dto, ct);
+        Console.WriteLine($"UpdateAsync response status code: {resp.StatusCode}");
         resp.EnsureSuccessStatusCode();
     }
 

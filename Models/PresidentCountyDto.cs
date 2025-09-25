@@ -1,15 +1,33 @@
-﻿//namespace PresidentCountyAPI.Dtos;
+﻿
+using System.Text.Json.Serialization;
+using Electionapp.UI.Converters;
+using Google.Cloud.Firestore;
 
-// Response DTO
-public record PresidentCountyDto(
-    string Id,
-    string State,
-    string County,
-    string CandidateName,
-    string Party,
-    string TotalVotes,
-    string Won
-);
+
+[FirestoreData]
+public class PresidentCountyDto
+{
+    [FirestoreDocumentId]
+    public string Id { get; set; } = string.Empty;
+    [FirestoreProperty("state")]
+    public string? State { get; set; }
+
+    [FirestoreProperty("county")]
+    public string? County { get; set; }
+
+    [FirestoreProperty("candidate")]
+    public string? CandidateName { get; set; }
+
+    [FirestoreProperty("party")]
+    public string? Party { get; set; }
+
+    [FirestoreProperty("total_votes")]
+    public string? TotalVotes { get; set; }
+
+    [FirestoreProperty("won")]
+    public string? Won { get; set; }
+}
+
 
 // Create DTO
 public record CreatePresidentCountyDto(

@@ -61,7 +61,7 @@ else
         </table>
     </div>
 
-        
+
 
     <div class="d-flex justify-content-between mt-3">
         <button class="btn btn-outline-secondary" @onclick="PrevPage" disabled="@( !canPrev )">
@@ -74,9 +74,57 @@ else
             Next
         </button>
     </div>
-
-
 }
+
+@if (showForm)
+{
+    <div class="modal show d-block" tabindex="-1" style="background:rgba(0,0,0,.5);">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">@((isEdit ? "Edit Candidate" : "Add Candidate"))</h5>
+                    <button type="button" class="btn-close" @onclick="() => showForm = false"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-2">
+                        <label class="form-label">State</label>
+                        <input class="form-control" @bind="formModel.State" />
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">County</label>
+                        <input class="form-control" @bind="formModel.County" />
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">Candidate Name</label>
+                        <input class="form-control" @bind="formModel.CandidateName" />
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">Party</label>
+                        <input class="form-control" @bind="formModel.Party" />
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">Total Votes</label>
+                        <input type="number" class="form-control" @bind="formModel.TotalVotes" />
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">Won</label>
+                        <select class="form-select" @bind="formModel.Won">
+                            <option value="true">True</option>
+                            <option value="false">False</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" @onclick="() => showForm = false">Cancel</button>
+                    <button class="btn btn-primary" @onclick="Save">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
 
 @code {
     private List<PresidentCountyDto> candidates = new();
@@ -85,6 +133,11 @@ else
 
     private int currentPage = 1;
     private int pageSize = 10; // default per page
+
+    private bool showForm = false;
+    private bool isEdit = false;
+    private PresidentCountyDto formModel = new();  
+
 
     private bool canPrev => currentPage > 1;
     private bool canNext => candidates.Count == pageSize;
@@ -119,16 +172,77 @@ else
         }
     }
 
+    private async Task Save()
+    {
+        if (isEdit)
+        {
+            var updateDto = new UpdatePresidentCountyDto(
+                formModel.State,
+                formModel.County,
+                formModel.CandidateName,
+                formModel.Party,
+                formModel.TotalVotes,
+                formModel.Won
+            );
+            await PcApi.UpdateAsync(formModel.Id, updateDto);
+
+            var index = candidates.FindIndex(x => x.Id == formModel.Id);
+            if (index >= 0) candidates[index] = formModel;
+        }
+        else
+        {
+            var createDto = new CreatePresidentCountyDto(
+                formModel.State,
+                formModel.County,
+                formModel.CandidateName,
+                formModel.Party,
+                formModel.TotalVotes,
+                formModel.Won
+            );
+
+            var created = await PcApi.CreateAsync(createDto);
+            candidates.Add(created);
+        }
+
+        showForm = false;
+    }
+
+
+
 
     void ShowCreate()
     {
-        // TODO: open modal / form to add a candidate
+        formModel = new PresidentCountyDto
+            {
+                Id = string.Empty,   // or Guid.NewGuid().ToString() if required
+                State = string.Empty,
+                County = string.Empty,
+                CandidateName = string.Empty,
+                Party = string.Empty,
+                TotalVotes = "0",
+                Won = "false"
+            };
+        isEdit = false;
+        showForm = true;
     }
 
     void BeginEdit(PresidentCountyDto c)
     {
-        // TODO: open modal / form to edit candidate
+        formModel = new PresidentCountyDto
+            {
+                Id = c.Id,
+                State = c.State,
+                County = c.County,
+                CandidateName = c.CandidateName,
+                Party = c.Party,
+                TotalVotes = c.TotalVotes,
+                Won = c.Won
+            };
+        isEdit = true;
+        showForm = true;
     }
+
+
 
     async Task ConfirmDelete(PresidentCountyDto c)
     {
