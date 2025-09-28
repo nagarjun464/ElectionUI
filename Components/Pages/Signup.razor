@@ -5,103 +5,104 @@
 @inject NavigationManager Nav
 @rendermode InteractiveServer
 
-<h3>Signup</h3>
+<div class="signup-container">
+    <div class="signup-card">
+        <h2>Signup</h2>
 
-<EditForm Model="@signupModel" OnValidSubmit="HandleSignup" FormName="SignupForm">
+        <EditForm Model="@signupModel">
+            <div class="form-group">
+                <label>First Name</label>
+                <InputText @bind-Value="signupModel.FirstName" class="form-control" />
+                @if (apiErrors.ContainsKey("FirstName"))
+                {
+                    foreach (var err in apiErrors["FirstName"])
+                    {
+                        <p style="color:red">@err</p>
+                    }
+                }
+            </div>
 
-    <div>
-        <label>First Name:</label>
-        <InputText @bind-Value="signupModel.FirstName" />
-        @if (apiErrors.ContainsKey("FirstName"))
-        {
-            foreach (var err in apiErrors["FirstName"])
-            {
-                <p style="color:red">@err</p>
-            }
-        }
+            <div class="form-group">
+                <label>Last Name</label>
+                <InputText @bind-Value="signupModel.LastName" class="form-control" />
+                @if (apiErrors.ContainsKey("LastName"))
+                {
+                    foreach (var err in apiErrors["LastName"])
+                    {
+                        <p style="color:red">@err</p>
+                    }
+                }
+            </div>
+
+            <div class="form-group">
+                <label>Username</label>
+                <InputText @bind-Value="signupModel.Username" class="form-control" />
+                @if (apiErrors.ContainsKey("Username"))
+                {
+                    foreach (var err in apiErrors["Username"])
+                    {
+                        <p style="color:red">@err</p>
+                    }
+                }
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <InputNumber @bind-Value="signupModel.PhoneNumber" class="form-control" />
+                @if (apiErrors.ContainsKey("PhoneNumber"))
+                {
+                    foreach (var err in apiErrors["PhoneNumber"])
+                    {
+                        <p style="color:red">@err</p>
+                    }
+                }
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <InputText @bind-Value="signupModel.Email" class="form-control" />
+                @if (apiErrors.ContainsKey("Email"))
+                {
+                    foreach (var err in apiErrors["Email"])
+                    {
+                        <p style="color:red">@err</p>
+                    }
+                }
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <InputText @bind-Value="signupModel.Password" type="password" class="form-control" />
+                @if (apiErrors.ContainsKey("Password"))
+                {
+                    foreach (var err in apiErrors["Password"])
+                    {
+                        <p style="color:red">@err</p>
+                    }
+                }
+            </div>
+
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <InputText @bind-Value="signupModel.ConfirmPassword" type="password" class="form-control" />
+                @if (apiErrors.ContainsKey("ConfirmPassword"))
+                {
+                    foreach (var err in apiErrors["ConfirmPassword"])
+                    {
+                        <p style="color:red">@err</p>
+                    }
+                }
+            </div>
+
+            <button type="button" class="btn-submit" @onclick="HandleSignup">Signup</button>
+
+            <div class="login-link">
+                Already have an account?
+                <a href="/login">Login here</a>
+            </div>
+        </EditForm>
     </div>
-
-    <div>
-        <label>Last Name:</label>
-        <InputText @bind-Value="signupModel.LastName" />
-        @if (apiErrors.ContainsKey("LastName"))
-        {
-            foreach (var err in apiErrors["LastName"])
-            {
-                <p style="color:red">@err</p>
-            }
-        }
-    </div>
-
-    <div>
-        <label>Username:</label>
-        <InputText @bind-Value="signupModel.Username" />
-        @if (apiErrors.ContainsKey("Username"))
-        {
-            foreach (var err in apiErrors["Username"])
-            {
-                <p style="color:red">@err</p>
-            }
-        }
-    </div>
-
-
-    <div>
-        <label>Phone Number:</label>
-        <InputNumber @bind-Value="signupModel.PhoneNumber" />
-        @if (apiErrors.ContainsKey("PhoneNumber"))
-        {
-            foreach (var err in apiErrors["PhoneNumber"])
-            {
-                <p style="color:red">@err</p>
-            }
-        }
-    </div>
-
-    <div>
-        <label>Email:</label>
-        <InputText @bind-Value="signupModel.Email" />
-        @if (apiErrors.ContainsKey("Email"))
-        {
-            foreach (var err in apiErrors["Email"])
-            {
-                <p style="color:red">@err</p>
-            }
-        }
-    </div>
-
-    <div>
-        <label>Password:</label>
-        <InputText @bind-Value="signupModel.Password" type="password" />
-        @if (apiErrors.ContainsKey("Password"))
-        {
-            foreach (var err in apiErrors["Password"])
-            {
-                <p style="color:red">@err</p>
-            }
-        }
-    </div>
-
-    <div>
-        <label>Confirm Password:</label>
-        <InputText @bind-Value="signupModel.ConfirmPassword" type="password" />
-        @if (apiErrors.ContainsKey("ConfirmPassword"))
-        {
-            foreach (var err in apiErrors["ConfirmPassword"])
-            {
-                <p style="color:red">@err</p>
-            }
-        }        
-    </div>
-    @if (apiErrors.ContainsKey("General"))
-    {
-        foreach (var err in apiErrors["General"])
-        {
-            <p style="color:red">@err</p>
-        }
-    }
-    <button type="submit">Signup</button>
-</EditForm>
+</div>
 
 @code {
     private SignupDto signupModel = new();
