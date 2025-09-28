@@ -1,0 +1,132 @@
+﻿@page "/"
+@using Electionapp.UI.Models
+@using Electionapp.UI.Services
+@inject SignupAPI SignupAPI
+@inject NavigationManager Nav
+@rendermode InteractiveServer
+
+<h3>Signup</h3>
+
+<EditForm Model="@signupModel" OnValidSubmit="HandleSignup" FormName="SignupForm">
+
+    <div>
+        <label>First Name:</label>
+        <InputText @bind-Value="signupModel.FirstName" />
+        @if (apiErrors.ContainsKey("FirstName"))
+        {
+            foreach (var err in apiErrors["FirstName"])
+            {
+                <p style="color:red">@err</p>
+            }
+        }
+    </div>
+
+    <div>
+        <label>Last Name:</label>
+        <InputText @bind-Value="signupModel.LastName" />
+        @if (apiErrors.ContainsKey("LastName"))
+        {
+            foreach (var err in apiErrors["LastName"])
+            {
+                <p style="color:red">@err</p>
+            }
+        }
+    </div>
+
+    <div>
+        <label>Username:</label>
+        <InputText @bind-Value="signupModel.Username" />
+        @if (apiErrors.ContainsKey("Username"))
+        {
+            foreach (var err in apiErrors["Username"])
+            {
+                <p style="color:red">@err</p>
+            }
+        }
+    </div>
+
+
+    <div>
+        <label>Phone Number:</label>
+        <InputNumber @bind-Value="signupModel.PhoneNumber" />
+        @if (apiErrors.ContainsKey("PhoneNumber"))
+        {
+            foreach (var err in apiErrors["PhoneNumber"])
+            {
+                <p style="color:red">@err</p>
+            }
+        }
+    </div>
+
+    <div>
+        <label>Email:</label>
+        <InputText @bind-Value="signupModel.Email" />
+        @if (apiErrors.ContainsKey("Email"))
+        {
+            foreach (var err in apiErrors["Email"])
+            {
+                <p style="color:red">@err</p>
+            }
+        }
+    </div>
+
+    <div>
+        <label>Password:</label>
+        <InputText @bind-Value="signupModel.Password" type="password" />
+        @if (apiErrors.ContainsKey("Password"))
+        {
+            foreach (var err in apiErrors["Password"])
+            {
+                <p style="color:red">@err</p>
+            }
+        }
+    </div>
+
+    <div>
+        <label>Confirm Password:</label>
+        <InputText @bind-Value="signupModel.ConfirmPassword" type="password" />
+        @if (apiErrors.ContainsKey("ConfirmPassword"))
+        {
+            foreach (var err in apiErrors["ConfirmPassword"])
+            {
+                <p style="color:red">@err</p>
+            }
+        }        
+    </div>
+    @if (apiErrors.ContainsKey("General"))
+    {
+        foreach (var err in apiErrors["General"])
+        {
+            <p style="color:red">@err</p>
+        }
+    }
+    <button type="submit">Signup</button>
+</EditForm>
+
+@code {
+    private SignupDto signupModel = new();
+    private Dictionary<string, string[]> apiErrors = new();
+
+    private async Task HandleSignup()
+{
+    var (success, errors) = await SignupAPI.SignupAsync(signupModel);
+
+    if (success)
+    {
+        apiErrors.Clear();
+        signupModel = new(); 
+        Nav.NavigateTo("/home");
+    }
+    else
+    {
+        apiErrors = errors;
+        foreach (var kv in apiErrors)
+        {
+            Console.WriteLine($"Key: {kv.Key}, Errors: {string.Join(",", kv.Value)}");
+        }
+
+        StateHasChanged();
+    }
+}
+
+}
