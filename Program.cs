@@ -30,9 +30,6 @@ builder.Services.AddHttpClient<LoginAPI>(c =>
     Console.WriteLine("#####LoginAPI#######" + c.BaseAddress);
 });
 
-builder.Services.AddBlazoredToast();
-builder.Services.AddSingleton<LoginState>();
-
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
