@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "O7dAr7/oRFbl0wEK6qJYJAIFLqjKItVW5jk0wDw2XRQ=",
+  "Hash": "iqt+1SlzCp3sPjq3q06FNp9zV2XwCutdDZx3vWmEMjk=",
   "Source": "Electionapp.UI",
   "BasePath": "_content/Electionapp.UI",
   "Mode": "Default",
@@ -16,6 +16,27 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\smart\\.nuget\\packages\\blazored.toast\\4.2.1\\staticwebassets\\Blazored.Toast.bundle.scp.css",
+      "SourceId": "Blazored.Toast",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\smart\\.nuget\\packages\\blazored.toast\\4.2.1\\staticwebassets\\",
+      "BasePath": "_content/Blazored.Toast",
+      "RelativePath": "Blazored.Toast.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "Fingerprint": "2eijknf10w",
+      "Integrity": "Jpy8GsZRrXfBBSxMmBBAzhap27c5/Nt85Nt7V3JT3B4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\smart\\.nuget\\packages\\blazored.toast\\4.2.1\\staticwebassets\\Blazored.Toast.bundle.scp.css"
+    },
     {
       "Identity": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\0a8qdg3req-6cfz1n2cew.gz",
       "SourceId": "Electionapp.UI",
@@ -204,6 +225,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Identity": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\5pb5ikadpp-2eijknf10w.gz",
+      "SourceId": "Blazored.Toast",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/Blazored.Toast",
+      "RelativePath": "Blazored.Toast.bundle.scp.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\smart\\.nuget\\packages\\blazored.toast\\4.2.1\\staticwebassets\\Blazored.Toast.bundle.scp.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "u0mgyial4g",
+      "Integrity": "gmIHx9dzppjpx64szoEwQ/peF/mQfRO6/2rSLcgU3Wc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\smart\\.nuget\\packages\\blazored.toast\\4.2.1\\staticwebassets\\Blazored.Toast.bundle.scp.css"
     },
     {
       "Identity": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\64dztcvyj6-dxx9fxp4il.gz",
@@ -521,12 +563,12 @@
       "OriginalItemSpec": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\eu4vl3cgwm-6xnm7cdqpl.gz",
+      "Identity": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\eu4vl3cgwm-o63pcklop5.gz",
       "SourceId": "Electionapp.UI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Electionapp.UI",
-      "RelativePath": "CSS/site#[.{fingerprint=6xnm7cdqpl}]?.css.gz",
+      "RelativePath": "CSS/site#[.{fingerprint=o63pcklop5}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -535,8 +577,8 @@
       "RelatedAsset": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\wwwroot\\CSS\\site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "945uy3cqdx",
-      "Integrity": "aQNlkctDT4UoDggR4tZeSonVWB+7UQ4gagyQ5fvSK2s=",
+      "Fingerprint": "loedvny94f",
+      "Integrity": "a9n2HHKSnw7vmuVHorq2BJEaL2Eg+QIMpaP9J9R0zSE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\wwwroot\\CSS\\site.css"
@@ -878,12 +920,12 @@
       "OriginalItemSpec": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\uq0bama6li-bcmbfdl3q3.gz",
+      "Identity": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\uq0bama6li-eho9p72c09.gz",
       "SourceId": "Electionapp.UI",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Electionapp.UI",
-      "RelativePath": "Electionapp.UI#[.{fingerprint=bcmbfdl3q3}]?.styles.css.gz",
+      "RelativePath": "Electionapp.UI#[.{fingerprint=eho9p72c09}]?.styles.css.gz",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Alternative",
@@ -892,8 +934,8 @@
       "RelatedAsset": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\scopedcss\\bundle\\Electionapp.UI.styles.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "s9fea1h9mw",
-      "Integrity": "0IK7zm12nq4lFI03ylBJnyE9Rbq2PAKD7X7sw3Z/EJo=",
+      "Fingerprint": "za116t6t6p",
+      "Integrity": "27bAp/vDbQAiMEboARF3QvMJnqXn9PJE2m1BYO+4HcM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\scopedcss\\bundle\\Electionapp.UI.styles.css"
@@ -1039,8 +1081,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "bcmbfdl3q3",
-      "Integrity": "JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU=",
+      "Fingerprint": "eho9p72c09",
+      "Integrity": "zsaAVGDWJ/ryHQOR2naiV0EFANMxL6EtV0SSliFgw4I=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\scopedcss\\bundle\\Electionapp.UI.styles.css"
@@ -1102,8 +1144,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6xnm7cdqpl",
-      "Integrity": "mok2BuNtLFBEzQ0OPyIiKIA3CD+uNT4xb+eeKS9tiUg=",
+      "Fingerprint": "o63pcklop5",
+      "Integrity": "YIhJafrMo1JJNCWlZ12NHUZwbZ4c0p7GBH7pE3V/KMY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\CSS\\site.css"
@@ -2077,6 +2119,143 @@
   ],
   "Endpoints": [
     {
+      "Route": "_content/Blazored.Toast/Blazored.Toast.bundle.scp.css",
+      "AssetFile": "C:\\Users\\smart\\.nuget\\packages\\blazored.toast\\4.2.1\\staticwebassets\\Blazored.Toast.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3483"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Jpy8GsZRrXfBBSxMmBBAzhap27c5/Nt85Nt7V3JT3B4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 19 Mar 2024 16:42:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Jpy8GsZRrXfBBSxMmBBAzhap27c5/Nt85Nt7V3JT3B4="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Blazored.Toast/Blazored.Toast.bundle.scp.css",
+      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\5pb5ikadpp-2eijknf10w.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001077586207"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "927"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gmIHx9dzppjpx64szoEwQ/peF/mQfRO6/2rSLcgU3Wc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 19 Mar 2024 16:42:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"Jpy8GsZRrXfBBSxMmBBAzhap27c5/Nt85Nt7V3JT3B4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Jpy8GsZRrXfBBSxMmBBAzhap27c5/Nt85Nt7V3JT3B4="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Blazored.Toast/Blazored.Toast.bundle.scp.css.gz",
+      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\5pb5ikadpp-2eijknf10w.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "927"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gmIHx9dzppjpx64szoEwQ/peF/mQfRO6/2rSLcgU3Wc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 19 Mar 2024 16:42:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gmIHx9dzppjpx64szoEwQ/peF/mQfRO6/2rSLcgU3Wc="
+        }
+      ]
+    },
+    {
       "Route": "app.css",
       "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\0h08tx5rhb-khy4lop6wu.gz",
       "Selectors": [
@@ -2375,13 +2554,13 @@
       ]
     },
     {
-      "Route": "CSS/site.6xnm7cdqpl.css",
-      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\eu4vl3cgwm-6xnm7cdqpl.gz",
+      "Route": "CSS/site.css",
+      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\eu4vl3cgwm-o63pcklop5.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.002164502165"
+          "Quality": "0.001757469244"
         }
       ],
       "ResponseHeaders": [
@@ -2391,19 +2570,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "461"
+          "Value": "568"
         },
         {
           "Name": "ETag",
-          "Value": "\"aQNlkctDT4UoDggR4tZeSonVWB+7UQ4gagyQ5fvSK2s=\""
+          "Value": "\"a9n2HHKSnw7vmuVHorq2BJEaL2Eg+QIMpaP9J9R0zSE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 28 Sep 2025 20:15:26 GMT"
+          "Value": "Mon, 29 Sep 2025 00:26:40 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -2419,26 +2598,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"mok2BuNtLFBEzQ0OPyIiKIA3CD+uNT4xb+eeKS9tiUg=\""
+          "Value": "W/\"YIhJafrMo1JJNCWlZ12NHUZwbZ4c0p7GBH7pE3V/KMY=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "6xnm7cdqpl"
-        },
-        {
-          "Name": "label",
-          "Value": "CSS/site.css"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-mok2BuNtLFBEzQ0OPyIiKIA3CD+uNT4xb+eeKS9tiUg="
+          "Value": "sha256-YIhJafrMo1JJNCWlZ12NHUZwbZ4c0p7GBH7pE3V/KMY="
         }
       ]
     },
     {
-      "Route": "CSS/site.6xnm7cdqpl.css",
+      "Route": "CSS/site.css",
       "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\wwwroot\\CSS\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2448,7 +2619,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1187"
+          "Value": "2695"
         },
         {
           "Name": "Content-Type",
@@ -2456,11 +2627,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"mok2BuNtLFBEzQ0OPyIiKIA3CD+uNT4xb+eeKS9tiUg=\""
+          "Value": "\"YIhJafrMo1JJNCWlZ12NHUZwbZ4c0p7GBH7pE3V/KMY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 28 Sep 2025 20:15:26 GMT"
+          "Value": "Mon, 29 Sep 2025 00:26:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YIhJafrMo1JJNCWlZ12NHUZwbZ4c0p7GBH7pE3V/KMY="
+        }
+      ]
+    },
+    {
+      "Route": "CSS/site.css.gz",
+      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\eu4vl3cgwm-o63pcklop5.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "568"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"a9n2HHKSnw7vmuVHorq2BJEaL2Eg+QIMpaP9J9R0zSE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 29 Sep 2025 00:26:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-a9n2HHKSnw7vmuVHorq2BJEaL2Eg+QIMpaP9J9R0zSE="
+        }
+      ]
+    },
+    {
+      "Route": "CSS/site.o63pcklop5.css",
+      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\eu4vl3cgwm-o63pcklop5.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001757469244"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "568"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"a9n2HHKSnw7vmuVHorq2BJEaL2Eg+QIMpaP9J9R0zSE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 29 Sep 2025 00:26:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"YIhJafrMo1JJNCWlZ12NHUZwbZ4c0p7GBH7pE3V/KMY=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "o63pcklop5"
+        },
+        {
+          "Name": "label",
+          "Value": "CSS/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-YIhJafrMo1JJNCWlZ12NHUZwbZ4c0p7GBH7pE3V/KMY="
+        }
+      ]
+    },
+    {
+      "Route": "CSS/site.o63pcklop5.css",
+      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\wwwroot\\CSS\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2695"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YIhJafrMo1JJNCWlZ12NHUZwbZ4c0p7GBH7pE3V/KMY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 29 Sep 2025 00:26:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2470,7 +2786,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "6xnm7cdqpl"
+          "Value": "o63pcklop5"
         },
         {
           "Name": "label",
@@ -2478,13 +2794,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-mok2BuNtLFBEzQ0OPyIiKIA3CD+uNT4xb+eeKS9tiUg="
+          "Value": "sha256-YIhJafrMo1JJNCWlZ12NHUZwbZ4c0p7GBH7pE3V/KMY="
         }
       ]
     },
     {
-      "Route": "CSS/site.6xnm7cdqpl.css.gz",
-      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\eu4vl3cgwm-6xnm7cdqpl.gz",
+      "Route": "CSS/site.o63pcklop5.css.gz",
+      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\eu4vl3cgwm-o63pcklop5.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2493,7 +2809,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "461"
+          "Value": "568"
         },
         {
           "Name": "Content-Type",
@@ -2501,11 +2817,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"aQNlkctDT4UoDggR4tZeSonVWB+7UQ4gagyQ5fvSK2s=\""
+          "Value": "\"a9n2HHKSnw7vmuVHorq2BJEaL2Eg+QIMpaP9J9R0zSE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 28 Sep 2025 20:15:26 GMT"
+          "Value": "Mon, 29 Sep 2025 00:26:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2523,7 +2839,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "6xnm7cdqpl"
+          "Value": "o63pcklop5"
         },
         {
           "Name": "label",
@@ -2531,144 +2847,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-aQNlkctDT4UoDggR4tZeSonVWB+7UQ4gagyQ5fvSK2s="
-        }
-      ]
-    },
-    {
-      "Route": "CSS/site.css",
-      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\eu4vl3cgwm-6xnm7cdqpl.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.002164502165"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "461"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"aQNlkctDT4UoDggR4tZeSonVWB+7UQ4gagyQ5fvSK2s=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 28 Sep 2025 20:15:26 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"mok2BuNtLFBEzQ0OPyIiKIA3CD+uNT4xb+eeKS9tiUg=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-mok2BuNtLFBEzQ0OPyIiKIA3CD+uNT4xb+eeKS9tiUg="
-        }
-      ]
-    },
-    {
-      "Route": "CSS/site.css",
-      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\wwwroot\\CSS\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1187"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"mok2BuNtLFBEzQ0OPyIiKIA3CD+uNT4xb+eeKS9tiUg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 28 Sep 2025 20:15:26 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-mok2BuNtLFBEzQ0OPyIiKIA3CD+uNT4xb+eeKS9tiUg="
-        }
-      ]
-    },
-    {
-      "Route": "CSS/site.css.gz",
-      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\eu4vl3cgwm-6xnm7cdqpl.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "461"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"aQNlkctDT4UoDggR4tZeSonVWB+7UQ4gagyQ5fvSK2s=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 28 Sep 2025 20:15:26 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-aQNlkctDT4UoDggR4tZeSonVWB+7UQ4gagyQ5fvSK2s="
+          "Value": "sha256-a9n2HHKSnw7vmuVHorq2BJEaL2Eg+QIMpaP9J9R0zSE="
         }
       ]
     },
@@ -2697,7 +2876,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 28 Sep 2025 08:42:20 GMT"
+          "Value": "Tue, 30 Sep 2025 00:12:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2758,7 +2937,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 28 Sep 2025 08:42:20 GMT"
+          "Value": "Tue, 30 Sep 2025 00:12:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2803,7 +2982,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 28 Sep 2025 08:42:20 GMT"
+          "Value": "Tue, 30 Sep 2025 00:12:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2826,167 +3005,6 @@
         {
           "Name": "label",
           "Value": "Electionapp.UI.bundle.scp.css.gz"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-0IK7zm12nq4lFI03ylBJnyE9Rbq2PAKD7X7sw3Z/EJo="
-        }
-      ]
-    },
-    {
-      "Route": "Electionapp.UI.bcmbfdl3q3.styles.css",
-      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\uq0bama6li-bcmbfdl3q3.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000511508951"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1954"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0IK7zm12nq4lFI03ylBJnyE9Rbq2PAKD7X7sw3Z/EJo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 28 Sep 2025 08:42:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "bcmbfdl3q3"
-        },
-        {
-          "Name": "label",
-          "Value": "Electionapp.UI.styles.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU="
-        }
-      ]
-    },
-    {
-      "Route": "Electionapp.UI.bcmbfdl3q3.styles.css",
-      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\scopedcss\\bundle\\Electionapp.UI.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6589"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 28 Sep 2025 08:42:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "bcmbfdl3q3"
-        },
-        {
-          "Name": "label",
-          "Value": "Electionapp.UI.styles.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU="
-        }
-      ]
-    },
-    {
-      "Route": "Electionapp.UI.bcmbfdl3q3.styles.css.gz",
-      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\uq0bama6li-bcmbfdl3q3.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1954"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0IK7zm12nq4lFI03ylBJnyE9Rbq2PAKD7X7sw3Z/EJo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 28 Sep 2025 08:42:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "bcmbfdl3q3"
-        },
-        {
-          "Name": "label",
-          "Value": "Electionapp.UI.styles.css.gz"
         },
         {
           "Name": "integrity",
@@ -3019,7 +3037,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 28 Sep 2025 08:42:20 GMT"
+          "Value": "Tue, 30 Sep 2025 00:12:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3072,7 +3090,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 28 Sep 2025 08:42:20 GMT"
+          "Value": "Tue, 30 Sep 2025 00:12:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3109,7 +3127,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 28 Sep 2025 08:42:20 GMT"
+          "Value": "Tue, 30 Sep 2025 00:12:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3132,13 +3150,13 @@
       ]
     },
     {
-      "Route": "Electionapp.UI.styles.css",
-      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\uq0bama6li-bcmbfdl3q3.gz",
+      "Route": "Electionapp.UI.eho9p72c09.styles.css",
+      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\uq0bama6li-eho9p72c09.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000511508951"
+          "Quality": "0.000503778338"
         }
       ],
       "ResponseHeaders": [
@@ -3148,15 +3166,184 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1954"
+          "Value": "1984"
         },
         {
           "Name": "ETag",
-          "Value": "\"0IK7zm12nq4lFI03ylBJnyE9Rbq2PAKD7X7sw3Z/EJo=\""
+          "Value": "\"27bAp/vDbQAiMEboARF3QvMJnqXn9PJE2m1BYO+4HcM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 28 Sep 2025 08:42:20 GMT"
+          "Value": "Tue, 30 Sep 2025 00:12:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"zsaAVGDWJ/ryHQOR2naiV0EFANMxL6EtV0SSliFgw4I=\""
+        },
+        {
+          "Name": "Link",
+          "Value": "<_content/Blazored.Toast/Blazored.Toast.bundle.scp.css>; rel=\"preload\"; as=\"style\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "eho9p72c09"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zsaAVGDWJ/ryHQOR2naiV0EFANMxL6EtV0SSliFgw4I="
+        },
+        {
+          "Name": "label",
+          "Value": "Electionapp.UI.styles.css"
+        }
+      ]
+    },
+    {
+      "Route": "Electionapp.UI.eho9p72c09.styles.css",
+      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\scopedcss\\bundle\\Electionapp.UI.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6657"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zsaAVGDWJ/ryHQOR2naiV0EFANMxL6EtV0SSliFgw4I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 30 Sep 2025 00:12:06 GMT"
+        },
+        {
+          "Name": "Link",
+          "Value": "<_content/Blazored.Toast/Blazored.Toast.bundle.scp.css>; rel=\"preload\"; as=\"style\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "eho9p72c09"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zsaAVGDWJ/ryHQOR2naiV0EFANMxL6EtV0SSliFgw4I="
+        },
+        {
+          "Name": "label",
+          "Value": "Electionapp.UI.styles.css"
+        }
+      ]
+    },
+    {
+      "Route": "Electionapp.UI.eho9p72c09.styles.css.gz",
+      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\uq0bama6li-eho9p72c09.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1984"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"27bAp/vDbQAiMEboARF3QvMJnqXn9PJE2m1BYO+4HcM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 30 Sep 2025 00:12:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "eho9p72c09"
+        },
+        {
+          "Name": "label",
+          "Value": "Electionapp.UI.styles.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-27bAp/vDbQAiMEboARF3QvMJnqXn9PJE2m1BYO+4HcM="
+        }
+      ]
+    },
+    {
+      "Route": "Electionapp.UI.styles.css",
+      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\uq0bama6li-eho9p72c09.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000503778338"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1984"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"27bAp/vDbQAiMEboARF3QvMJnqXn9PJE2m1BYO+4HcM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 30 Sep 2025 00:12:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3176,13 +3363,17 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU=\""
+          "Value": "W/\"zsaAVGDWJ/ryHQOR2naiV0EFANMxL6EtV0SSliFgw4I=\""
+        },
+        {
+          "Name": "Link",
+          "Value": "<_content/Blazored.Toast/Blazored.Toast.bundle.scp.css>; rel=\"preload\"; as=\"style\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU="
+          "Value": "sha256-zsaAVGDWJ/ryHQOR2naiV0EFANMxL6EtV0SSliFgw4I="
         }
       ]
     },
@@ -3196,8 +3387,12 @@
           "Value": "bytes"
         },
         {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
           "Name": "Content-Length",
-          "Value": "6589"
+          "Value": "6657"
         },
         {
           "Name": "Content-Type",
@@ -3205,27 +3400,27 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU=\""
+          "Value": "\"zsaAVGDWJ/ryHQOR2naiV0EFANMxL6EtV0SSliFgw4I=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 28 Sep 2025 08:42:20 GMT"
+          "Value": "Tue, 30 Sep 2025 00:12:06 GMT"
         },
         {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
+          "Name": "Link",
+          "Value": "<_content/Blazored.Toast/Blazored.Toast.bundle.scp.css>; rel=\"preload\"; as=\"style\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-JecfcoF6yNCXV8Sc1H0AC16+wnxV8C1w9hgGBWiLwtU="
+          "Value": "sha256-zsaAVGDWJ/ryHQOR2naiV0EFANMxL6EtV0SSliFgw4I="
         }
       ]
     },
     {
       "Route": "Electionapp.UI.styles.css.gz",
-      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\uq0bama6li-bcmbfdl3q3.gz",
+      "AssetFile": "C:\\Users\\smart\\source\\repos\\Electionapp.UI\\Electionapp.UI\\obj\\Debug\\net9.0\\compressed\\uq0bama6li-eho9p72c09.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3234,7 +3429,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1954"
+          "Value": "1984"
         },
         {
           "Name": "Content-Type",
@@ -3242,11 +3437,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"0IK7zm12nq4lFI03ylBJnyE9Rbq2PAKD7X7sw3Z/EJo=\""
+          "Value": "\"27bAp/vDbQAiMEboARF3QvMJnqXn9PJE2m1BYO+4HcM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 28 Sep 2025 08:42:20 GMT"
+          "Value": "Tue, 30 Sep 2025 00:12:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3264,7 +3459,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-0IK7zm12nq4lFI03ylBJnyE9Rbq2PAKD7X7sw3Z/EJo="
+          "Value": "sha256-27bAp/vDbQAiMEboARF3QvMJnqXn9PJE2m1BYO+4HcM="
         }
       ]
     },

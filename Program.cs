@@ -1,6 +1,8 @@
 using System.Runtime.Intrinsics.Arm;
+using Blazored.Toast;
 using Electionapp.UI.Components;
 using Electionapp.UI.Services;
+using Electionapp.UI.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,7 +24,14 @@ builder.Services.AddHttpClient<SignupAPI>(c  =>
     Console.WriteLine("#####SignupAPI#######" + c.BaseAddress);
 });
 
+builder.Services.AddHttpClient<LoginAPI>(c =>
+{
+    c.BaseAddress = new Uri("https://signup-api-814747071660.us-central1.run.app");
+    Console.WriteLine("#####LoginAPI#######" + c.BaseAddress);
+});
 
+builder.Services.AddBlazoredToast();
+builder.Services.AddSingleton<LoginState>();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()

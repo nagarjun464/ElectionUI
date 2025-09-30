@@ -1,5 +1,16 @@
 ﻿@page "/home"
+@using Blazored.Toast.Services
 @rendermode InteractiveServer
+@using Electionapp.UI.Models;
+@inject NavigationManager Nav
+@inject IJSRuntime JS
+
+@if (!string.IsNullOrEmpty(successMessage))
+{
+    <div class="alert alert-success text-center mt-3" role="alert">
+        @successMessage
+    </div>
+}
 
 <div class="hero">
     <div class="overlay">
@@ -7,3 +18,26 @@
         <p>Manage elections, candidates, and more.</p>
     </div>
 </div>
+@code {
+    private string? successMessage;
+
+    protected override void OnInitialized()
+    {
+        var uri = new Uri(Nav.Uri);
+        var query = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(uri.Query);
+
+        if (query.TryGetValue("msg", out var msg) && msg == "LoginSuccess")
+        {
+            successMessage = "✅ Login was successful!";
+        }
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender && !string.IsNullOrEmpty(successMessage))
+        {
+            await Task.Delay(3000); 
+            successMessage = null;  
+            StateHasChanged();      
+        }
+    }
+}

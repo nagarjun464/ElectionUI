@@ -1,0 +1,68 @@
+﻿@page "/"
+@using Electionapp.UI.Models
+@using Electionapp.UI.Services
+@inject LoginAPI LoginAPI
+@inject NavigationManager Nav
+@rendermode InteractiveServer
+
+<div class="login-container">
+    <div class="login-card">
+        <h2>Login</h2>
+
+        <EditForm Model="@loginModel">
+            <div class="form-group">
+                <label>Username or Email</label>
+                <InputText @bind-Value="loginModel.UsernameOrEmail" class="form-control" />
+                
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <InputText @bind-Value="loginModel.Password" type="password" class="form-control" />
+            </div>
+
+            <button type="button" class="btn-submit" @onclick="HandleLogin">Login</button>
+
+
+            <div class="divider">
+            @if (apiErrors.ContainsKey("General"))
+            {
+                foreach (var err in apiErrors["General"])
+                {
+                    <span class="error-text">@err</span>
+                }
+            }</div>
+
+            <div class="divider">or</div>
+
+            <button type="button" class="btn-google" disabled>
+                Google Sign-In (Coming Soon)
+            </button>
+
+            <div class="signup-link">
+                Don’t have an account? <a href="/signup">Signup here</a>
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    private LoginDto loginModel = new();
+    private Dictionary<string, string[]> apiErrors = new();
+
+    private async Task HandleLogin()
+    {
+        var (success, errors) = await LoginAPI.LoginAsync(loginModel);
+
+        if (success)
+        {
+			apiErrors.Clear();
+            Nav.NavigateTo("/home?msg=LoginSuccess");
+        }
+        else
+        {
+            apiErrors = errors;
+            StateHasChanged();
+        }
+    }
+}
