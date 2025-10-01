@@ -59,7 +59,7 @@
         if (success)
         {
 			apiErrors.Clear();
-            Nav.NavigateTo("/home?msg=LoginSuccess");
+            Nav.NavigateTo($"/home?msg=LoginSuccess&user={loginModel.UsernameOrEmail}");
         }
         else
         {

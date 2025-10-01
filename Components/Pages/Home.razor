@@ -11,7 +11,6 @@
         @successMessage
     </div>
 }
-
 <div class="hero">
     <div class="overlay">
         <h1>Welcome to Election Admin</h1>
@@ -27,11 +26,24 @@
         var query = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(uri.Query);
 
         string email = query.TryGetValue("email", out var mail) ? mail.ToString() : string.Empty;
+        string User = query.TryGetValue("user", out var user) ? user.ToString() : string.Empty;
 
         if (!string.IsNullOrEmpty(email) && email.Contains("@"))
         {
             var username = email.Split('@')[0]; 
             successMessage = $"👋 Hey {username}, login successful!";
+        }
+        else if (!string.IsNullOrEmpty(User))
+        {
+            if (User.Contains("@"))
+            {
+                var username = User.Split('@')[0];
+                successMessage = $"👋 Hey {username}, login successful!";
+            }
+            else{
+				var username = User;
+                successMessage = $"👋 Hey {username}, login successful!";
+            }
         }
         else
         {
