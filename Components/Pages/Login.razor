@@ -35,8 +35,9 @@
 
             <div class="divider">or</div>
 
-            <button type="button" class="btn-google" disabled>
-                Google Sign-In (Coming Soon)
+            <button type="button" class="btn-google"
+                    @onclick="LoginWithGoogle">
+                Login with Google
             </button>
 
             <div class="signup-link">
@@ -49,6 +50,7 @@
 @code {
     private LoginDto loginModel = new();
     private Dictionary<string, string[]> apiErrors = new();
+	private string? successMessage;
 
     private async Task HandleLogin()
     {
@@ -63,6 +65,26 @@
         {
             apiErrors = errors;
             StateHasChanged();
+        }
+    }
+    private void LoginWithGoogle()
+    {
+        var googleUrl = "https://signup-api-814747071660.us-central1.run.app/api/auth/google-login";
+        Nav.NavigateTo(googleUrl, forceLoad: true);
+    }
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+        {
+            var uri = new Uri(Nav.Uri);
+            var query = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(uri.Query);
+
+            if (query.TryGetValue("login", out var loginFlag) && loginFlag == "success")
+            {
+                var email = query.TryGetValue("email", out var mail) ? mail.ToString() : "User";
+                successMessage = $"Welcome {email}, login successful ✅";
+                StateHasChanged();
+            }
         }
     }
 }
