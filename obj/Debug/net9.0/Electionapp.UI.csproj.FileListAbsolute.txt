@@ -42,7 +42,6 @@ C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\scope
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\scopedcss\bundle\Electionapp.UI.styles.css
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\scopedcss\projectbundle\Electionapp.UI.bundle.scp.css
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\compressed\0h08tx5rhb-khy4lop6wu.gz
-C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\compressed\eu4vl3cgwm-o63pcklop5.gz
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\compressed\0nz1h6aidj-bqjiyaj88i.gz
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\compressed\uleo6ewhu0-c2jlpeoesf.gz
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\compressed\9l2t7rg2v2-erw9l3u2r3.gz

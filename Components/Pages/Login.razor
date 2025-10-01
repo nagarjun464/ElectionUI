@@ -5,43 +5,52 @@
 @inject NavigationManager Nav
 @rendermode InteractiveServer
 
-<div class="login-container">
-    <div class="login-card">
-        <h2>Login</h2>
+<div class="d-flex justify-content-center align-items-center vh-100 bg-light">
+    <div class="card shadow-lg p-4" style="width: 380px; border-radius: 12px;">
+        <div class="text-center mb-4">
+            <img src="favicon.png" alt="Logo" width="60" class="mb-3" />
+            <h3 class="fw-bold">Welcome Back</h3>
+            <p class="text-muted">Sign in to continue</p>
+        </div>
 
         <EditForm Model="@loginModel">
-            <div class="form-group">
-                <label>Username or Email</label>
-                <InputText @bind-Value="loginModel.UsernameOrEmail" class="form-control" />
-                
-            </div>
-
-            <div class="form-group">
-                <label>Password</label>
-                <InputText @bind-Value="loginModel.Password" type="password" class="form-control" />
-            </div>
-
-            <button type="button" class="btn-submit" @onclick="HandleLogin">Login</button>
-
-
-            <div class="divider">
-            @if (apiErrors.ContainsKey("General"))
-            {
-                foreach (var err in apiErrors["General"])
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Username or Email</label>
+                <InputText @bind-Value="loginModel.UsernameOrEmail" class="form-control" placeholder="Enter your username or email" />
+                @if (apiErrors.ContainsKey("UsernameOrEmail"))
                 {
-                    <span class="error-text">@err</span>
+                    foreach (var err in apiErrors["UsernameOrEmail"])
+                    {
+                        <small class="text-danger">@err</small>
+                    }
                 }
-            }</div>
+            </div>
 
-            <div class="divider">or</div>
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Password</label>
+                <InputText @bind-Value="loginModel.Password" type="password" class="form-control" placeholder="Enter your password" />
+                @if (apiErrors.ContainsKey("Password"))
+                {
+                    foreach (var err in apiErrors["Password"])
+                    {
+                        <small class="text-danger">@err</small>
+                    }
+                }
+            </div>
 
-            <button type="button" class="btn-google"
-                    @onclick="LoginWithGoogle">
-                Login with Google
+            <button type="button" class="btn btn-primary w-100 mb-3" style="border-radius: 8px;" @onclick="HandleLogin">
+                Login
             </button>
 
-            <div class="signup-link">
-                Don’t have an account? <a href="/signup">Signup here</a>
+            <div class="text-center text-muted mb-3">or</div>
+
+            <button type="button" class="btn btn-outline-danger w-100 mb-3" style="border-radius: 8px;" @onclick="LoginWithGoogle">
+                <i class="bi bi-google"></i> Login with Google
+            </button>
+
+            <div class="text-center">
+                <span class="text-muted">Don’t have an account?</span>
+                <a href="/signup" class="fw-semibold"> Signup here</a>
             </div>
         </EditForm>
     </div>
@@ -50,7 +59,6 @@
 @code {
     private LoginDto loginModel = new();
     private Dictionary<string, string[]> apiErrors = new();
-	private string? successMessage;
 
     private async Task HandleLogin()
     {
@@ -58,8 +66,8 @@
 
         if (success)
         {
-			apiErrors.Clear();
-            Nav.NavigateTo($"/home?msg=LoginSuccess&user={loginModel.UsernameOrEmail}");
+            apiErrors.Clear();
+            Nav.NavigateTo("/home?msg=LoginSuccess");
         }
         else
         {
@@ -67,24 +75,10 @@
             StateHasChanged();
         }
     }
+
     private void LoginWithGoogle()
     {
         var googleUrl = "https://signup-api-814747071660.us-central1.run.app/api/auth/google-login";
         Nav.NavigateTo(googleUrl, forceLoad: true);
-    }
-    protected override void OnAfterRender(bool firstRender)
-    {
-        if (firstRender)
-        {
-            var uri = new Uri(Nav.Uri);
-            var query = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(uri.Query);
-
-            if (query.TryGetValue("login", out var loginFlag) && loginFlag == "success")
-            {
-                var email = query.TryGetValue("email", out var mail) ? mail.ToString() : "User";
-                successMessage = $"Welcome {email}, login successful ✅";
-                StateHasChanged();
-            }
-        }
     }
 }
