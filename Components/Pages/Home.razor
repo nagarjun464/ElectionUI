@@ -26,10 +26,18 @@
         var uri = new Uri(Nav.Uri);
         var query = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(uri.Query);
 
-        if (query.TryGetValue("msg", out var msg) && msg == "LoginSuccess")
+        string email = query.TryGetValue("email", out var mail) ? mail.ToString() : string.Empty;
+
+        if (!string.IsNullOrEmpty(email) && email.Contains("@"))
+        {
+            var username = email.Split('@')[0]; 
+            successMessage = $"👋 Hey {username}, login successful!";
+        }
+        else
         {
             successMessage = "✅ Login was successful!";
         }
+        
     }
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {

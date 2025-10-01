@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Electionapp.UI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5b7258036d87bc727cc9361399c750d540b5aa4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cad22529e91d239a4d500c4f6af6249981151a95")]
 [assembly: System.Reflection.AssemblyProductAttribute("Electionapp.UI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Electionapp.UI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
