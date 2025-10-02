@@ -1,0 +1,52 @@
+﻿@page "/google-redirect"
+@using Microsoft.AspNetCore.WebUtilities
+@inject NavigationManager Nav
+@inject Blazored.LocalStorage.ILocalStorageService LocalStorage
+@inject AuthenticationStateProvider AuthStateProvider
+
+<PageTitle>Signing you in...</PageTitle>
+
+<div class="text-center mt-5">
+    <h4>Signing you in with Google...</h4>
+</div>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        try
+        {
+            var uri = Nav.ToAbsoluteUri(Nav.Uri);
+            if (QueryHelpers.ParseQuery(uri.Query).TryGetValue("token", out var token))
+            {
+                var jwt = token.ToString();
+                if (!string.IsNullOrWhiteSpace(jwt))
+                {
+                    // Save token locally
+                    await LocalStorage.SetItemAsync("authToken", jwt);
+                
+                    //  Mark as authenticated
+                    var customAuthProvider = (CustomAuthStateProvider)AuthStateProvider;
+                    await customAuthProvider.MarkUserAsAuthenticated(jwt);
+
+                    // Redirect to home
+                    Nav.NavigateTo("/home");
+                }
+                else
+                {
+                    Console.WriteLine("Token is empty.");
+                    Nav.NavigateTo("/login");
+                }
+            }
+            else
+            {
+                Console.WriteLine("No token found in query string.");
+                Nav.NavigateTo("/login");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Google redirect error: {ex.Message}");
+            Nav.NavigateTo("/login");
+        }
+    }
+}

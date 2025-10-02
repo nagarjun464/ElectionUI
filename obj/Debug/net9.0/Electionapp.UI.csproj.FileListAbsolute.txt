@@ -119,3 +119,6 @@ C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\refin
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\Electionapp.UI.pdb
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\Electionapp.UI.genruntimeconfig.cache
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\ref\Electionapp.UI.dll
+C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

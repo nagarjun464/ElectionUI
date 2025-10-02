@@ -153,56 +153,83 @@
 @page "/home"
 @attribute [Authorize]
 @using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.WebUtilities
+@using System.Security.Claims
 @inject AuthenticationStateProvider AuthStateProvider
-@using System.Security.Claims 
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
 @inject NavigationManager Nav
 
-<div class="home-page">
-    @if (authUser != null && authUser.Identity != null && authUser.Identity.IsAuthenticated)
-    {
-        <div class="alert alert-success text-center mt-3" role="alert">
-            👋 Hey @username, login successful!
-        </div>
+@rendermode InteractiveServer
 
-        <div class="hero">
-            <div class="overlay">
-                <h1>Welcome to Election Admin</h1>
-                <p>Email: @email</p>
-                <button class="btn btn-danger" @onclick="Logout">Logout</button>
+<div class="home-page">
+    <AuthorizeView>
+        <Authorized>
+            <div class="hero">
+                <div class="overlay">
+                    <h1>Welcome to Election Admin</h1>
+                    <p>Email: @email</p>
+                    <button class="btn btn-danger" @onclick="Logout">Logout</button>
+                </div>
             </div>
-        </div>
-    }
-    else
-    {
-        <p class="text-center mt-3">Redirecting to login...</p>
-    }
+        </Authorized>
+
+        <NotAuthorized>
+            <p class="text-center mt-3">Redirecting to login...</p>
+        </NotAuthorized>
+    </AuthorizeView>
 </div>
 
 @code {
-    private ClaimsPrincipal? authUser;
     private string? email;
-    private string? username;
 
-    protected override async Task OnInitializedAsync()
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        var state = await AuthStateProvider.GetAuthenticationStateAsync();
-        authUser = state.User;
+        if (firstRender)
+        {
+            var uri = Nav.ToAbsoluteUri(Nav.Uri);
 
-        if (authUser.Identity != null && authUser.Identity.IsAuthenticated)
-        {
-            email = authUser.FindFirst(c => c.Type == ClaimTypes.Email)?.Value;
-            username = email?.Split('@')[0] ?? authUser.Identity.Name;
-        }
-        else
-        {
-            // not logged in → redirect to login
-            Nav.NavigateTo($"/login?returnUrl=/home", forceLoad: true);
+            // ✅ Step 1: Handle token if coming from Google
+            if (QueryHelpers.ParseQuery(uri.Query).TryGetValue("token", out var token))
+            {
+                var jwtToken = token.ToString();
+
+                if (!string.IsNullOrWhiteSpace(jwtToken))
+                {
+                    // Store token locally
+                    await localStorage.SetItemAsync("authToken", jwtToken);
+
+                    // Update authentication state
+                    await ((CustomAuthStateProvider)AuthStateProvider).MarkUserAsAuthenticated(jwtToken);
+
+                    // ✅ Remove token from URL after saving
+                    Nav.NavigateTo("/", forceLoad: true);
+                    return;
+                }
+                else
+                {
+                    Console.WriteLine("JWT token missing or invalid in query.");
+                }
+            }
+
+            // ✅ Step 2: Get user info (after token storage)
+            var authState = await AuthStateProvider.GetAuthenticationStateAsync();
+            var user = authState.User;
+
+            if (user.Identity != null && user.Identity.IsAuthenticated)
+            {
+                email = user.FindFirstValue(ClaimTypes.Email);
+                StateHasChanged();
+            }
+            else
+            {
+                Nav.NavigateTo("/login", forceLoad: true);
+            }
         }
     }
 
-    private void Logout()
+    private async void Logout()
     {
-        ((CustomAuthStateProvider)AuthStateProvider).MarkUserAsLoggedOut();
+        await ((CustomAuthStateProvider)AuthStateProvider).MarkUserAsLoggedOut();
         Nav.NavigateTo("/login", forceLoad: true);
     }
 }
