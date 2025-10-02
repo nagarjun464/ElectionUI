@@ -1,9 +1,13 @@
-﻿@page "/login"
+﻿@page "/"
+@page "/login"
 @using Electionapp.UI.Models
 @using Electionapp.UI.Services
 @inject LoginAPI LoginAPI
 @inject NavigationManager Nav
 @rendermode InteractiveServer
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@inject AuthenticationStateProvider AuthStateProvider
+
 
 <div class="d-flex justify-content-center align-items-center vh-100 bg-light">
     <div class="card shadow-lg p-4" style="width: 380px; border-radius: 12px;">
@@ -15,8 +19,9 @@
 
         <EditForm Model="@loginModel">
             <div class="mb-3">
-                <label class="form-label fw-semibold">Username or Email</label>
-                <InputText @bind-Value="loginModel.UsernameOrEmail" class="form-control" placeholder="Enter your username or email" />
+                <label for="username" class="form-label fw-semibold">Username or Email</label>
+                <InputText id="username" @bind-Value="loginModel.UsernameOrEmail" class="form-control" placeholder="Enter your username or email" />
+
                 @if (apiErrors.ContainsKey("UsernameOrEmail"))
                 {
                     foreach (var err in apiErrors["UsernameOrEmail"])
@@ -27,8 +32,9 @@
             </div>
 
             <div class="mb-3">
-                <label class="form-label fw-semibold">Password</label>
-                <InputText @bind-Value="loginModel.Password" type="password" class="form-control" placeholder="Enter your password" />
+                <label for="password" class="form-label fw-semibold">Password</label>
+                <InputText id="password" @bind-Value="loginModel.Password" type="password" class="form-control" placeholder="Enter your password" />
+
                 @if (apiErrors.ContainsKey("Password"))
                 {
                     foreach (var err in apiErrors["Password"])
@@ -62,20 +68,28 @@
 
     private async Task HandleLogin()
     {
-        var (success, errors) = await LoginAPI.LoginAsync(loginModel);
+        var (success, token, errors) = await LoginAPI.LoginAsync(loginModel);
 
-        if (success)
+        if (success && !string.IsNullOrEmpty(token))
         {
             apiErrors.Clear();
-            // "/home?msg=LoginSuccess"
-            Nav.NavigateTo($"/home?msg=success&&email={loginModel.UsernameOrEmail}");
+
+            // Save token to local storage
+            await localStorage.SetItemAsync("authToken", token);
+
+            // Update authentication state
+            await ((CustomAuthStateProvider)AuthStateProvider).MarkUserAsAuthenticated(token);
+
+            // Redirect
+            Nav.NavigateTo("/home");
         }
         else
         {
             apiErrors = errors;
-            Console.WriteLine(apiErrors+"jwrybf");
+            Console.WriteLine(errors);
             StateHasChanged();
         }
+        Console.WriteLine("Token######"+token);
     }
 
     private void LoginWithGoogle()

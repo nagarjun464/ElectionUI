@@ -1,22 +1,40 @@
 ﻿@inherits LayoutComponentBase
-@* <div class="page"> *@
-    @* <div class="sidebar"> *@
+@using Microsoft.AspNetCore.Components.Authorization
+@inject AuthenticationStateProvider AuthStateProvider
+
+<AuthorizeView>
+    <Authorized>
         <NavMenu />
-    @* </div> *@
+    </Authorized>
 
-@*     <main> *@
-@*         <div class="top-row px-4"> *@
-@*             <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a> *@
-@*         </div> *@
+    <NotAuthorized>
+        <!-- Optional: keep a simple title or empty -->
+        <div class="text-center py-3 fw-bold fs-5 text-primary">
+            Election Admin
+        </div>
+    </NotAuthorized>
+</AuthorizeView>
 
-        <div class="content px-4"> 
-             @Body 
-         </div> 
-@*     </main>
-@* </div> *@
+<div class="content px-4">
+    @Body
+</div>
 
 <div id="blazor-error-ui" data-nosnippet>
     An unhandled error has occurred.
     <a href="." class="reload">Reload</a>
     <span class="dismiss">🗙</span>
 </div>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // Wait briefly to ensure LocalStorage JS is ready
+            await Task.Delay(100);
+
+            var customAuthProvider = AuthStateProvider as CustomAuthStateProvider;
+            customAuthProvider?.ForceAuthenticationStateRefresh();
+        }
+    }
+}

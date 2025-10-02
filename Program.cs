@@ -6,6 +6,7 @@ using Electionapp.UI.Models;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Blazored.LocalStorage;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,23 +38,12 @@ builder.Services.AddHttpClient<LoginAPI>(c =>
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-//  Add Authentication & Authorization
-builder.Services.AddAuthenticationCore(); // <-- Required for Blazor
-builder.Services.AddAuthorizationCore();
-
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie(options =>
-    {
-        options.LoginPath = "/login"; // matches Login.razor page
-        options.AccessDeniedPath = "/login";
-        options.LogoutPath = "/logout";
-        options.ReturnUrlParameter = "returnUrl"; // ensure return works
-    });
-
-
 //  Custom AuthenticationStateProvider (you must implement this)
 builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthStateProvider>();
 
+builder.Services.AddAuthorizationCore();
+builder.Services.AddBlazoredLocalStorage();
+builder.Services.AddAuthenticationCore();
 
 
 var app = builder.Build();
@@ -68,7 +58,6 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthentication();  // Add this
 app.UseAuthorization();   // Add this
 
 

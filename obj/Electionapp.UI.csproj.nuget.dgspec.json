@@ -50,6 +50,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Blazored.LocalStorage": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
             "Blazored.Toast": {
               "target": "Package",
               "version": "[4.2.1, )"
@@ -61,6 +65,10 @@
             "Microsoft.AspNetCore.Components.Authorization": {
               "target": "Package",
               "version": "[9.0.9, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.14.0, )"
             }
           },
           "imports": [

@@ -16,13 +16,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Electionapp.UI.bcmbfdl3q3.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"bcmbfdl3q3"},{"Name":"integrity","Value":"sha256-JecfcoF6yNCXV8Sc1H0AC16\u002BwnxV8C1w9hgGBWiLwtU="},{"Name":"label","Value":"_content/Electionapp.UI/Electionapp.UI.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6589"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022JecfcoF6yNCXV8Sc1H0AC16\u002BwnxV8C1w9hgGBWiLwtU=\u0022"},{"Name":"Last-Modified","Value":"Tue, 30 Sep 2025 00:12:06 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6589"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022JecfcoF6yNCXV8Sc1H0AC16\u002BwnxV8C1w9hgGBWiLwtU=\u0022"},{"Name":"Last-Modified","Value":"Thu, 02 Oct 2025 06:41:02 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Electionapp.UI/Electionapp.UI.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Electionapp.UI.bcmbfdl3q3.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-JecfcoF6yNCXV8Sc1H0AC16\u002BwnxV8C1w9hgGBWiLwtU="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"6589"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022JecfcoF6yNCXV8Sc1H0AC16\u002BwnxV8C1w9hgGBWiLwtU=\u0022"},{"Name":"Last-Modified","Value":"Tue, 30 Sep 2025 00:12:06 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"6589"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022JecfcoF6yNCXV8Sc1H0AC16\u002BwnxV8C1w9hgGBWiLwtU=\u0022"},{"Name":"Last-Modified","Value":"Thu, 02 Oct 2025 06:41:02 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Electionapp.UI/favicon.dzse0hm46o.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.png'))</AssetFile>

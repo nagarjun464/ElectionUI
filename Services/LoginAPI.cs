@@ -1,4 +1,5 @@
 ﻿using System.Net.Http.Json;
+using System.Text.Json;
 using Electionapp.UI.Models;
 
 namespace Electionapp.UI.Services;
@@ -11,15 +12,19 @@ public class LoginAPI
         _http = http;
     }
 
-    public async Task<(bool Success, Dictionary<string, string[]> Errors)> LoginAsync(LoginDto dto)
+    public async Task<(bool Success, string Token, Dictionary<string, string[]> Errors)> LoginAsync(LoginDto dto)
     {
         var response = await _http.PostAsJsonAsync("api/Auth/login", dto);
 
         if (response.IsSuccessStatusCode)
-            return (true, new Dictionary<string, string[]>());
+        {
+            var result = await response.Content.ReadFromJsonAsync<JsonElement>();
+            var token = result.GetProperty("token").GetString();
+            return (true, token, new());
+        }
 
-        var errorString = await response.Content.ReadAsStringAsync();
         var errors = new Dictionary<string, string[]>();
+        var errorString = await response.Content.ReadAsStringAsync();
 
         try
         {
@@ -34,12 +39,6 @@ public class LoginAPI
                         .ToArray();
                 }
             }
-            
-            else if (json.RootElement.TryGetProperty("error", out var msg))
-            {
-                errors["General"] = new[] { msg.GetString() ?? "Invalid credentials" };
-            }
-
             else if (json.RootElement.TryGetProperty("title", out var title))
             {
                 // Show only the "title" if no detailed errors exist
@@ -48,9 +47,11 @@ public class LoginAPI
         }
         catch
         {
-            errors["General"] = new[] { "Unexpected error occurred" };
+            errors["General"] = new[] { "Invalid credentials" };
         }
+        
 
-        return (false, errors);
+        return (false, null, errors);
     }
+
 }

@@ -1,94 +1,227 @@
-﻿@page "/home"
+﻿@* @page "/home" *@
+@* @using System.Security.Claims *@
+@* @using Microsoft.AspNetCore.Components.Authorization *@
+@* @inject AuthenticationStateProvider AuthStateProvider *@
+
+@* <h3>Welcome Home!</h3> *@
+
+@* @if (authUser != null) *@
+@* { *@
+@*     <p>Hello, <b>@authUser.Identity.Name</b> 👋</p> *@
+@*     <p>Email: @email</p> *@
+@*     <button class="btn btn-danger" @onclick="Logout">Logout</button> *@
+@* } *@
+@* else *@
+@* { *@
+@*     <p>Loading user info...</p> *@
+@* } *@
+
+@* @code { *@
+@*     private ClaimsPrincipal? authUser; *@
+@*     private string? email; *@
+
+@*     protected override async Task OnInitializedAsync() *@
+@*     { *@
+@*         var state = await AuthStateProvider.GetAuthenticationStateAsync(); *@
+@*         authUser = state.User; *@
+
+@*         if (authUser.Identity != null && authUser.Identity.IsAuthenticated) *@
+@*         { *@
+@*             email = authUser.FindFirst(c => c.Type.Contains("emailaddress"))?.Value; *@
+@*         } *@
+@*         else *@
+@*         { *@
+@*             email = "Guest"; *@
+@*         } *@
+@*     } *@
+
+@*     private void Logout() *@
+@*     { *@
+@*         ((CustomAuthStateProvider)AuthStateProvider).MarkUserAsLoggedOut(); *@
+@*     } *@
+@* } *@
+
+
+
+@* @page "/home" *@
+@*  @attribute [Authorize]  *@
+@*  @using Microsoft.AspNetCore.Components.Authorization  *@
+@*  @using Microsoft.AspNetCore.Authorization  *@
+@*  @using Blazored.Toast.Services  *@
+@*  @rendermode InteractiveServer  *@
+@*  @using Electionapp.UI.Models;  *@
+@*  @inject NavigationManager Nav  *@
+@*  @inject IJSRuntime JS  *@
+
+@*  <div class="home-page">  *@
+@*  @if (!string.IsNullOrEmpty(successMessage))  *@
+@*  {  *@
+@*      <div class="alert alert-success text-center mt-3" role="alert">  *@
+@*          @successMessage  *@
+@*      </div>  *@
+@*  }  *@
+@*  <div class="hero">  *@
+@*      <div class="overlay">  *@
+@*          <h1>Welcome to Election Admin</h1>  *@
+@*          <p>Manage elections, candidates, and more.</p>  *@
+@*      </div>  *@
+@*  </div>  *@
+@*  </div>  *@
+@*  @code {  *@
+@*      private string? successMessage;  *@
+
+@*      protected override void OnInitialized()  *@
+@*      {  *@
+@*          var uri = new Uri(Nav.Uri);  *@
+@*          var query = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(uri.Query);  *@
+
+@*          string email = query.TryGetValue("email", out var mail) ? mail.ToString() : string.Empty;  *@
+@*          string User = query.TryGetValue("user", out var user) ? user.ToString() : string.Empty;  *@
+
+@*          if (!string.IsNullOrEmpty(email) && email.Contains("@"))  *@
+@*          {  *@
+@*              var username = email.Split('@')[0];   *@
+@*              successMessage = $"👋 Hey {username}, login successful!";  *@
+@*          }  *@
+@*          else if (!string.IsNullOrEmpty(User))  *@
+@*          {  *@
+@*              if (User.Contains("@"))  *@
+@*              {  *@
+@*                  var username = User.Split('@')[0];  *@
+@*                  successMessage = $"👋 Hey {username}, login successful!";  *@
+@*              }  *@
+@*              else{  *@
+@*  				var username = User;  *@
+@*                  successMessage = $"👋 Hey {username}, login successful!";  *@
+@*              }  *@
+@*          }  *@
+@*          else  *@
+@*          {  *@
+@*              successMessage = "✅ Login was successful!";  *@
+@*          }  *@
+       
+@*      }  *@
+@*      protected override async Task OnAfterRenderAsync(bool firstRender)  *@
+@*      {  *@
+@*          if (firstRender && !string.IsNullOrEmpty(successMessage))  *@
+@*          {  *@
+@*              await Task.Delay(3000);   *@
+@*              successMessage = null;   *@
+@*              StateHasChanged();        *@
+@*          }  *@
+@*      }  *@
+@*  }  *@
+@*  <style>  *@
+
+@*      html, body {  *@
+@*          margin: 0;  *@
+@*          padding: 0;  *@
+@*          height: 100%;  *@
+@*          overflow: hidden;   *@
+@*      }  *@
+@*      .home-page {  *@
+@*          height: 100vh;  *@
+@*          width: 100vw;  *@
+@*          overflow: hidden;   *@
+@*          position: relative;  *@
+@*      }  *@
+@*      .hero {  *@
+@*          position: relative;  *@
+@*          height: 100vh;                *@
+@*          width: 100%;  *@
+@*          background: url('/images/vote-bg.jpg') no-repeat center center;  *@
+@*          background-size: cover;       *@
+@*          overflow: hidden;             *@
+@*          margin: 0;  *@
+@*          padding: 0;  *@
+@*      }  *@
+
+@*      .overlay {  *@
+@*          position: absolute;  *@
+@*          top: 50%;  *@
+@*          left: 50%;  *@
+@*          transform: translate(-50%, -50%);  *@
+@*          background: rgba(0, 0, 0, 0.4);   *@
+@*          padding: 30px 50px;  *@
+@*          border-radius: 10px;  *@
+@*          color: white;  *@
+@*      }  *@
+
+@*  </style>  *@
+
+
+@page "/home"
 @attribute [Authorize]
 @using Microsoft.AspNetCore.Components.Authorization
-@using Microsoft.AspNetCore.Authorization
-@using Blazored.Toast.Services
-@rendermode InteractiveServer
-@using Electionapp.UI.Models;
+@inject AuthenticationStateProvider AuthStateProvider
+@using System.Security.Claims 
 @inject NavigationManager Nav
-@inject IJSRuntime JS
 
 <div class="home-page">
-@if (!string.IsNullOrEmpty(successMessage))
-{
-    <div class="alert alert-success text-center mt-3" role="alert">
-        @successMessage
-    </div>
-}
-<div class="hero">
-    <div class="overlay">
-        <h1>Welcome to Election Admin</h1>
-        <p>Manage elections, candidates, and more.</p>
-    </div>
-</div>
-</div>
-@code {
-    private string? successMessage;
-
-    protected override void OnInitialized()
+    @if (authUser != null && authUser.Identity != null && authUser.Identity.IsAuthenticated)
     {
-        var uri = new Uri(Nav.Uri);
-        var query = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(uri.Query);
+        <div class="alert alert-success text-center mt-3" role="alert">
+            👋 Hey @username, login successful!
+        </div>
 
-        string email = query.TryGetValue("email", out var mail) ? mail.ToString() : string.Empty;
-        string User = query.TryGetValue("user", out var user) ? user.ToString() : string.Empty;
+        <div class="hero">
+            <div class="overlay">
+                <h1>Welcome to Election Admin</h1>
+                <p>Email: @email</p>
+                <button class="btn btn-danger" @onclick="Logout">Logout</button>
+            </div>
+        </div>
+    }
+    else
+    {
+        <p class="text-center mt-3">Redirecting to login...</p>
+    }
+</div>
 
-        if (!string.IsNullOrEmpty(email) && email.Contains("@"))
+@code {
+    private ClaimsPrincipal? authUser;
+    private string? email;
+    private string? username;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var state = await AuthStateProvider.GetAuthenticationStateAsync();
+        authUser = state.User;
+
+        if (authUser.Identity != null && authUser.Identity.IsAuthenticated)
         {
-            var username = email.Split('@')[0]; 
-            successMessage = $"👋 Hey {username}, login successful!";
-        }
-        else if (!string.IsNullOrEmpty(User))
-        {
-            if (User.Contains("@"))
-            {
-                var username = User.Split('@')[0];
-                successMessage = $"👋 Hey {username}, login successful!";
-            }
-            else{
-				var username = User;
-                successMessage = $"👋 Hey {username}, login successful!";
-            }
+            email = authUser.FindFirst(c => c.Type == ClaimTypes.Email)?.Value;
+            username = email?.Split('@')[0] ?? authUser.Identity.Name;
         }
         else
         {
-            successMessage = "✅ Login was successful!";
+            // not logged in → redirect to login
+            Nav.NavigateTo($"/login?returnUrl=/home", forceLoad: true);
         }
-        
     }
-    protected override async Task OnAfterRenderAsync(bool firstRender)
+
+    private void Logout()
     {
-        if (firstRender && !string.IsNullOrEmpty(successMessage))
-        {
-            await Task.Delay(3000); 
-            successMessage = null;  
-            StateHasChanged();      
-        }
+        ((CustomAuthStateProvider)AuthStateProvider).MarkUserAsLoggedOut();
+        Nav.NavigateTo("/login", forceLoad: true);
     }
 }
+
 <style>
-
-    html, body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        overflow: hidden; 
-    }
-
     .home-page {
         height: 100vh;
         width: 100vw;
-        overflow: hidden; 
+        overflow: hidden;
         position: relative;
     }
 
     .hero {
         position: relative;
-        height: 100vh;              
+        height: 100vh;
         width: 100%;
         background: url('/images/vote-bg.jpg') no-repeat center center;
-        background-size: cover;     
-        overflow: hidden;           
+        background-size: cover;
+        overflow: hidden;
         margin: 0;
         padding: 0;
     }
@@ -98,10 +231,9 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: rgba(0, 0, 0, 0.4); 
+        background: rgba(0, 0, 0, 0.4);
         padding: 30px 50px;
         border-radius: 10px;
         color: white;
     }
-
 </style>

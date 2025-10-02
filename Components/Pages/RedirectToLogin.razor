@@ -3,6 +3,7 @@
 @code {
     protected override void OnInitialized()
     {
-        Nav.NavigateTo("/login", true);
+        var returnUrl = Uri.EscapeDataString(Nav.Uri);
+        Nav.NavigateTo($"/{returnUrl}", forceLoad: true);
     }
 }
