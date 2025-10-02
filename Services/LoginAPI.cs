@@ -25,9 +25,25 @@ public class LoginAPI
         {
             var json = System.Text.Json.JsonDocument.Parse(errorString);
 
-            if (json.RootElement.TryGetProperty("error", out var msg))
+            if (json.RootElement.TryGetProperty("errors", out var errorObj))
+            {
+                foreach (var prop in errorObj.EnumerateObject())
+                {
+                    errors[prop.Name] = prop.Value.EnumerateArray()
+                        .Select(x => x.GetString() ?? "")
+                        .ToArray();
+                }
+            }
+            
+            else if (json.RootElement.TryGetProperty("error", out var msg))
             {
                 errors["General"] = new[] { msg.GetString() ?? "Invalid credentials" };
+            }
+
+            else if (json.RootElement.TryGetProperty("title", out var title))
+            {
+                // Show only the "title" if no detailed errors exist
+                errors["General"] = new[] { title.GetString() ?? "Something went wrong." };
             }
         }
         catch

@@ -1,4 +1,7 @@
 ﻿@page "/home"
+@attribute [Authorize]
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Authorization
 @using Blazored.Toast.Services
 @rendermode InteractiveServer
 @using Electionapp.UI.Models;

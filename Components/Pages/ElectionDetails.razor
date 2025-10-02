@@ -1,6 +1,8 @@
 ﻿@page "/electiondetails/{id}"
 @rendermode InteractiveServer
-
+@attribute [Authorize]
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Authorization
 @using Electionapp.UI.Models
 @using Electionapp.UI.Services
 @inject ElectionApiClient Api

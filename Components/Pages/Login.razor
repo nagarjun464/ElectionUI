@@ -1,4 +1,4 @@
-﻿@page "/"
+﻿@page "/login"
 @using Electionapp.UI.Models
 @using Electionapp.UI.Services
 @inject LoginAPI LoginAPI
@@ -67,11 +67,13 @@
         if (success)
         {
             apiErrors.Clear();
-            Nav.NavigateTo("/home?msg=LoginSuccess");
+            // "/home?msg=LoginSuccess"
+            Nav.NavigateTo($"/home?msg=success&&email={loginModel.UsernameOrEmail}");
         }
         else
         {
             apiErrors = errors;
+            Console.WriteLine(apiErrors+"jwrybf");
             StateHasChanged();
         }
     }

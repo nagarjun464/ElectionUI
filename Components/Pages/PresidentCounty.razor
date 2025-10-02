@@ -1,4 +1,7 @@
 ﻿@page "/presidentcounty"
+@attribute [Authorize]
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Authorization
 @using Electionapp.UI.Services
 @using Electionapp.UI.Models
 @inject PresidentCountyApiClient PcApi
