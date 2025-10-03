@@ -9,15 +9,10 @@ public class PresidentCountyApiClient
     public PresidentCountyApiClient(HttpClient http) => _http = http;
 
     // List all records
-    public async Task<List<PresidentCountyDto>> ListAsync(int page = 1, int pageSize = 50, string? search = null)
+    public async Task<List<PresidentCountyDto>> ListAsync(int page, int pageSize, string search)
     {
-        var url = $"api/PresidentCounty?page={page}&pageSize={pageSize}";
-
-        if (!string.IsNullOrWhiteSpace(search))
-            url += $"&search={Uri.EscapeDataString(search)}";
-
-        return await _http.GetFromJsonAsync<List<PresidentCountyDto>>(url)
-               ?? new List<PresidentCountyDto>();
+        var url = $"api/presidentcounty?page={page}&pageSize={pageSize}&search={search}";
+        return await _http.GetFromJsonAsync<List<PresidentCountyDto>>(url) ?? new();
     }
 
 

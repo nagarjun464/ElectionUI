@@ -15,9 +15,19 @@
         <label class="form-label">Search Candidate</label>
         <input class="form-control" placeholder="Type name..." @bind="search" />
     </div>
-    <div class="d-flex gap-2">
-        <button class="btn btn-outline-secondary" @onclick="Load">⟳ Refresh</button>
-        <button class="btn btn-primary" @onclick="ShowCreate">+ Add Candidate</button>
+    <div class="d-flex flex-wrap gap-2 align-items-end mb-3">
+        <div class="flex-grow-1">
+            <label class="form-label">Search Candidate</label>
+            <input class="form-control"
+               placeholder="Type name..."
+               value="@search"
+               @oninput="OnSearchInput" />
+        </div>
+        <div class="d-flex gap-2">
+            <button class="btn btn-outline-secondary" @onclick="Load">⟳ Refresh</button>
+            <button class="btn btn-outline-secondary" @onclick="ClearSearch">Clear</button>
+            <button class="btn btn-primary" @onclick="ShowCreate">+ Add Candidate</button>
+        </div>
     </div>
 </div>
 
@@ -141,7 +151,7 @@ else
     private bool isEdit = false;
     private PresidentCountyDto formModel = new();  
 
-
+    private System.Timers.Timer? searchTimer;
     private bool canPrev => currentPage > 1;
     private bool canNext => candidates.Count == pageSize;
 
@@ -155,6 +165,26 @@ else
         loading = true; StateHasChanged();
         candidates = await PcApi.ListAsync(currentPage, pageSize, search);
         loading = false; StateHasChanged();
+    }
+
+    private async Task OnKeyPress(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter")
+        {
+            currentPage = 1;
+            await Load();
+        }
+    }
+    private async Task ClearSearch()
+    {
+        search = "";
+        currentPage = 1;
+        await Load();
+    }
+    private async Task OnSearchInput(ChangeEventArgs e)
+    {
+        search = e.Value?.ToString() ?? "";
+        await InvokeAsync(async () => await Load());
     }
 
     private async Task PrevPage()
