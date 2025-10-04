@@ -22,6 +22,8 @@
         <div class="d-flex gap-2">
             <button class="btn btn-outline-secondary" @onclick="Load">⟳ Refresh</button>
             <button class="btn btn-outline-secondary" @onclick="ClearSearch">Clear</button>
+            <button class="btn btn-success" @onclick="ExportExcel">📊 Export Excel</button>
+            <button class="btn btn-danger" @onclick="ExportPdf">📄 Export PDF</button>
             <button class="btn btn-primary" @onclick="ShowCreate">+ Add Candidate</button>
         </div>
     </div>
@@ -271,7 +273,17 @@ else
         showForm = true;
     }
 
+    private async Task ExportExcel()
+    {
+        var fileUrl = $"{PcApi.BaseAddress}api/presidentcounty/export/excel?search={search}";
+        await JS.InvokeVoidAsync("downloadFile", fileUrl);
+    }
 
+    private async Task ExportPdf()
+    {
+        var fileUrl = $"{PcApi.BaseAddress}api/presidentcounty/export/pdf?search={search}";
+        await JS.InvokeVoidAsync("downloadFile", fileUrl);
+    }
 
     async Task ConfirmDelete(PresidentCountyDto c)
     {

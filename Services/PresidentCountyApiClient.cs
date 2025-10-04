@@ -7,6 +7,7 @@ public class PresidentCountyApiClient
 {
     private readonly HttpClient _http;
     public PresidentCountyApiClient(HttpClient http) => _http = http;
+    public string BaseAddress => _http.BaseAddress?.ToString() ?? string.Empty;
 
     // List all records
     public async Task<List<PresidentCountyDto>> ListAsync(int page, int pageSize, string search)
@@ -14,6 +15,7 @@ public class PresidentCountyApiClient
         var url = $"api/presidentcounty?page={page}&pageSize={pageSize}&search={search}";
         return await _http.GetFromJsonAsync<List<PresidentCountyDto>>(url) ?? new();
     }
+
 
 
     //public async Task<List<PresidentCountyDto>> ListAsync(int limit = 50, CancellationToken ct = default)
