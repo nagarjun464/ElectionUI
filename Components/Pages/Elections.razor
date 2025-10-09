@@ -34,8 +34,11 @@
 
     <div class="d-flex gap-2">
         <button class="btn btn-outline-secondary" @onclick="Load">⟳ Refresh</button>
+        <button class="btn btn-success" @onclick="ExportExcel">📊 Export Excel</button>
+        <button class="btn btn-danger" @onclick="ExportPdf">📄 Export PDF</button>
         <button class="btn btn-primary" @onclick="ShowCreate">+ New Election</button>
     </div>
+
 </div>
 
 @if (loading)
@@ -192,6 +195,33 @@ else
         form = ElectionForm.FromDto(e);
         showCreate = false; showEdit = true;
     }
+
+    private async Task ExportExcel()
+    {
+        try
+        {
+            var fileUrl = $"{Api.BaseAddress}api/elections/export/excel?search={search}";
+            await JS.InvokeVoidAsync("open", fileUrl, "_blank");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Excel export failed: {ex.Message}");
+        }
+    }
+
+    private async Task ExportPdf()
+    {
+        try
+        {
+            var fileUrl = $"{Api.BaseAddress}api/elections/export/pdf?search={search}";
+            await JS.InvokeVoidAsync("open", fileUrl, "_blank");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"PDF export failed: {ex.Message}");
+        }
+    }
+
 
     void ClosePanel()
     {

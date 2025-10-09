@@ -7,6 +7,7 @@ public class ElectionApiClient
 {
     private readonly HttpClient _http;
     public ElectionApiClient(HttpClient http) => _http = http;
+    public string BaseAddress => _http.BaseAddress?.ToString() ?? string.Empty;
 
     public async Task<List<ElectionDto>> ListAsync(int limit = 50, string? status = null, CancellationToken ct = default)
     {

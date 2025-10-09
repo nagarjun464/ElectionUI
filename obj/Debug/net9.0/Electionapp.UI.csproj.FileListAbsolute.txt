@@ -24,6 +24,7 @@ C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\bin\Debug\net9.0\Grpc.
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\bin\Debug\net9.0\Grpc.Core.Api.dll
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\bin\Debug\net9.0\Grpc.Net.Client.dll
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\bin\Debug\net9.0\Grpc.Net.Common.dll
+C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\bin\Debug\net9.0\Microsoft.AspNetCore.Authorization.dll
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\bin\Debug\net9.0\Microsoft.AspNetCore.Components.dll
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\bin\Debug\net9.0\Microsoft.AspNetCore.Components.Authorization.dll
@@ -36,6 +37,8 @@ C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\bin\Debug\net9.0\Micro
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\bin\Debug\net9.0\Newtonsoft.Json.dll
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\bin\Debug\net9.0\System.CodeDom.dll
@@ -119,6 +122,3 @@ C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\refin
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\Electionapp.UI.pdb
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\Electionapp.UI.genruntimeconfig.cache
 C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\obj\Debug\net9.0\ref\Electionapp.UI.dll
-C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\smart\source\repos\Electionapp.UI\Electionapp.UI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
